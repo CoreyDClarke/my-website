@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- Notes:
-(Shift + Option + F) = Format highlighted html. 
+(Shift + Option + F) = Format highlighted html.
+(ctrl + / = comment out) 
 -->
 <html lang="en">
 
@@ -10,43 +11,58 @@
     <meta name="viewport" content="width=<<device-width>>, initial-scale=1.0">
     <meta name="description"
         content="Explore the world of art and creativity as viewed by Corey Clarke and see created pieces made by the artist.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="animation.js" defer></script>
     <title>Corey's Creativity Portfolio </title>
 </head>
 
 <body>
     <header>
         <nav>
-            <a>
-                <h3>All Works</h3>
-            </a>
-            <a>
-                <h3>Areas of Study</h3>
-            </a>
-            <a>
-                <h3>Creative Proccess</h3>
-            </a>
-            <a>
-                <h3>More about Me</h3>
-            </a>
-            <a>
-                <h3>Contact Info</h3>
-            </a>
+            <div id="center_me">
+                <ul id="navbar">
+                    <li><a href="index.html">I will hold a logo?</a></li>
+
+                    <li><a href="all-works.html">All Works</a></li>
+
+                    <li><a href="areas-of-study.html">Areas of Study</a></li>
+
+                    <li><a href="creative-process.html">Creative Proccess</a></li>
+
+                    <li><a href="more-about-me.html">More about Me</a></li>
+
+                    <li><a href="contact-info.html">Contact Info</a></li>
+                </ul>
+            </div>
         </nav>
-        <h1>Creative Works &amp; Artistic Journey</h1>
-        <h2>Creativity Portfolio</h2>
-        <h2>Corey Clarke</h2>
-        <blockquote>
-            <q>Art is not what you see, but what you make others see.</q>
-            <br>-Edgar Degas
-        </blockquote>
-        <img src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/436158/796156/main-image" height="250"
-            alt="A Picture of an Oil painting portrait of Edgar Degas. Image from the Metropolitan Muesum of Arts. https://www.metmuseum.org/art/collection/search/436158 ">
-        <!-- Insert more images, perhaps example -->
-        <h3>Edgar Degas</h3>
-        <p>
-            (Specialty: Pastel Drawing and Oil Painting)
-            <br> Also practiced: Bronze Sculpture, Monotype Printmaking, and Drawing
-        </p>
+        <section id="main_heading">
+            <h1>Creative Works &amp; Artistic Journey</h1>
+            <h2>Creativity Portfolio</h2>
+            <h2>Corey Clarke</h2>
+        </section>
+        <section id="home_quote">
+            <blockquote>
+                <q>Art is not what you see, but what you make others see.</q>
+                <br>-Edgar Degas
+            </blockquote>
+
+            <div class="dropdown">
+                <button class="dropdown-button" id="activate_drop" tabindex="1">Quick Info on Edgar Degas</button>
+                <div class="dropdown-content" id="java_drop_active">
+                    <img src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/436158/796156/main-image"
+                        height="200em"
+                        alt="A Picture of an Oil painting portrait of Edgar Degas. Image from the Metropolitan Muesum of Arts. https://www.metmuseum.org/art/collection/search/436158 ">
+                    <!-- Insert more images, perhaps example -->
+                    <h3>Edgar Degas</h3>
+                    <p>
+                        (Specialty: Pastel Drawing and Oil Painting)
+                        <br> Also practiced: Bronze Sculpture, Monotype Printmaking, and Drawing
+                    </p>
+                </div>
+            </div>
+
+
+        </section>
     </header>
     <main>
         <h2>Artist Statement</h2> <!--This may be moved to the More about Me subpage-->

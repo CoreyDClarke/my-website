@@ -1,0 +1,248 @@
+/* --------------Universal Selector-------------- */
+/* "*" = Universal Selector, Equals a style rule  that applys to every part of a website. The <body> is also a similar html tag. */
+
+*{
+    font-family: 'Times New Roman', Times, Arial, serif;
+}
+
+body{
+    margin:0;
+}
+
+
+main{
+    /* padding:0 40px 0 40px; changed to responsive */
+    padding:0 4% 0 4%;
+}
+/* --------------Type Selector-------------- */
+/* Refers to a specific Html Tag that is styled the same across a website. */
+
+h1,h2,h3{
+    font-variant: small-caps;
+}
+
+/* --------------(ID Selector)  Start= "#"-------------- */
+/* Adds a style rule to ONE specific Html tag that has the correlating ID. */
+
+#main_heading {
+    clear: left;
+    padding: 5px;
+    padding-left: 10px;
+    background-color: rgb(11, 148, 16);
+    margin: 0px 15px 0px 15px;
+}
+
+#home_quote{
+    margin-left: 5%;
+}
+/* --------------(Class Selector)  Start= "."-------------- */
+/* Adds a style rule to any Html tag that has the correlating class. */
+
+.dropdown {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-button:hover {
+    padding:2.5%;
+    font-size:125%;
+
+  }
+
+  .dropdown-button {
+    background-color: #eee;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    padding: 10px 20px;
+  }
+
+  .dropdown-content {
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+
+  .dropdown:focus .dropdown-button {
+    background-color: #ccc;
+    color: #fff;
+    outline: none;
+  }
+
+/* 
+--------------Relational Selectors:--------------
+All of these relational selectors only affect tags that come after the first mentioned tag, 
+never any tags that were written above or before.
+
+    [Make CSS modifications to a tag within a specified parent tag.]*/ 
+
+/* Child Selectors: >
+    Points to any specific html tag (child) that exists within a (parent) html tag that is directly one relation over to get modified.
+    It only adds the css modifications to the child, may add style to more than one child with the same tag.
+    Example: (parent)>(child), body>header */
+    
+/* Descendant Selectors:
+    Refers to any html tag (Descendant) that is within a specfied (Parent) html tag to be modified.
+    This includes child selectors and any relations at or below that level.
+    Example: (parent) (Descendant), section em, 
+
+    [Make CSS modifications to a tag that is within the same level of relation.]*/  
+    
+    nav #navbar {
+        /* margin-top: 40px; changed to responsive */
+        margin-top:1%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-inline-start: 0px;
+        background-color:#7fffd4;
+        height:2%;
+    }
+    
+    #navbar li {
+        text-align: center;
+        display: block;
+        float: left;
+        /* padding: 10px;  changed to responsive */ 
+        padding:1%;
+        border: 1px solid #000;
+        flex-basis: 20%;
+        width:16.6666666667%;
+        height:fit-content;
+        
+    }
+    
+    #navbar a {
+        text-align: center;
+        display: block;
+        /* padding: 3px; changed to responsive */
+        padding: 3%;
+        text-decoration: none;
+        background-color: #7fffd4;
+        color:#000;
+        height:fit-content;
+        
+    }
+/* General Sibling Selectors: ~
+    Points to a specific html tag to by stylized that is anywhere in the same level of relation.
+    It adds the css modifications to any same tags in the same level of relation.
+    Example: (first-tag)~(modified/sibling-tag), */
+
+/* Adjacent Sibling Selectors: +
+    Points to an html tag that is directly next to/below the first mentioned tag on the same level of relation.
+    Only affects tags that come after the first mentioned tag.
+    Example: (first-tag)+(modified/sibling-tag), */
+
+/* --------------Combination Selectors--------------
+
+Similar to a relational seclector, but for class attributes:
+    (parent)(class)
+    Example: h1.title
+
+Select more than one html tag:
+    (tag1),(tag2),(tag3),(tag4)
+    Example: h1, li, p
+
+--------------Attribute Selectors--------------
+Refer specifically to:
+
+All elements that have an href:
+    *[href] {}
+
+<a> tags that have href:
+    a[href] {}
+
+input[type=""] {}
+
+*/
+
+
+
+
+/* More Notes */
+
+/* "command" + "/" = CSS comment out */
+
+/* 
+--------------COLOR--------------
+Gets added to any decendent elements.
+
+Regular:
+    color: rgb (red#, Green#, Blue#);
+        (Can ADD % Values. 0 - 255- 100%)
+
+Hexidecimal Value:
+    color: #000000; (six digit number combo)
+
+Adding Color Transparency:
+    color: rgba (red#, Green#, Blue#, Alpha/Tranparent % or decimal format);
+
+Add a color to the background:
+    background-color: blue;
+
+--------------Font--------------
+
+Most websites use sans-serif fonts.
+
+Change the font of the correlating html tag:
+    font-family: Arial; 
+
+Manipulate the size of a specific text:
+    font-size:;
+
+Make the font thicker/thinner:
+    font-weight:bold; 
+        100-900 general range.
+ 
+    font-spacing:;
+
+Add smaller capitalized letters to letter after the first one:
+    font-variant: small-caps;
+
+Change the vertical spacing between each new line of text:
+    line-height: 1.4em; (increased spacing by 40%) 
+        em is equal to the font size. 
+        Can use em, percentage%, rem, 0px.
+
+Add a specific text element:
+    text-decoration:none;
+        Example: underline (looks like a link), strike-through text/line-through
+
+Add an indent at the beginning of a text related tag:
+    text-indent:2em;
+
+    text-align: center;
+
+Add a shadow to text:
+    text-shadow:;
+    needs: horizontal offset + vertical offset + blur radius + shadow color
+
+Text shortcuts: 
+    Example: 
+    font: italic 200 normal;
+    Can include multiple design properties but always must include a text size and a font-family name.
+
+--------------Format & Spacing--------------
+
+Place an element on the right or left side of a page: 
+    Float: left; 
+
+Undo a float Property on specific elements:
+    To Undo, match "float:" with "clear:"  
+    clear: left; 
+
+Add space arround an element: 
+    Padding: 2em;
+
+Add padding to a specific edge/side of an element:
+    margin-right:1em;
+*/
