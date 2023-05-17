@@ -1,3 +1,5 @@
+
+/* Auto format CSS On MAC OS: command + k + f. */
 /* --------------Universal Selector-------------- */
 /* "*" = Universal Selector, Equals a style rule  that applys to every part of a website. The <body> is also a similar html tag. */
 
@@ -7,6 +9,7 @@
 
 body{
     margin:0;
+    width: 100%;
 }
 
 
@@ -14,11 +17,16 @@ main{
     /* padding:0 40px 0 40px; changed to responsive */
     padding:0 4% 0 4%;
 }
+
 /* --------------Type Selector-------------- */
 /* Refers to a specific Html Tag that is styled the same across a website. */
 
 h1,h2,h3{
     font-variant: small-caps;
+}
+
+footer{
+    text-align: center;
 }
 
 /* --------------(ID Selector)  Start= "#"-------------- */
@@ -30,10 +38,19 @@ h1,h2,h3{
     padding-left: 10px;
     background-color: rgb(11, 148, 16);
     margin: 0px 15px 0px 15px;
+
+    /* touch-action: pan-y;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    --mouse-x: 96.7378%;
+    --mouse-y: 6.987%;
+     */
 }
 
-#home_quote{
-    margin-left: 5%;
+#home_quote {
+    /* margin-left: 5%; */
+    text-align: center;
 }
 /* --------------(Class Selector)  Start= "."-------------- */
 /* Adds a style rule to any Html tag that has the correlating class. */
@@ -62,7 +79,7 @@ h1,h2,h3{
   }
 
   .dropdown-content {
-    position: absolute;
+    /* position: absolute; */
     background-color: #f9f9f9;
     width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -74,6 +91,89 @@ h1,h2,h3{
     background-color: #ccc;
     color: #fff;
     outline: none;
+  }
+
+  .featured-images-container{
+    display:grid;
+    grid-template: 1fr/ 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "img1 img2 img3 img4 img5";
+    height:20%;
+    width: 80%;
+    list-style-type: none;
+    /* list-style: none;
+    grid-area: center;
+    display: grid;
+    grid-auto-flow: column;
+    margin: 0;
+    padding: 0;
+    -webkit-box-flex: 1; */
+
+    /* margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;   */
+  }
+
+  .image_item1{
+    grid-area:img1;
+    width: 20%;
+    
+  }
+
+  .image_item2{
+    grid-area:img2;
+    width: 100%;
+  }
+
+  .image_item3{
+    grid-area:img3;
+    width: 100%;
+  }
+
+  .image_item4{
+    grid-area:img4;
+    width: 100%;
+  }
+
+  .image_item5{
+    grid-area:img5;
+    width: 100%;
+  }
+
+ div .feature__overlay{
+    /* --overlay-start:0.0633333;
+    --overlay-end:0.533333;
+
+    background: -webkit-gradient(linear,left top,left bottom,from(rgba(12,25,50,var(--overlay-start,0))),to(rgba(12,25,50,var(--overlay-end,.4))));
+    background: -webkit-linear-gradient(rgba(12,25,50,var(--overlay-start,0)),rgba(12,25,50,var(--overlay-end,.4)));
+    background: -o-linear-gradient(rgba(12,25,50,var(--overlay-start,0)),rgba(12,25,50,var(--overlay-end,.4)));
+    background: linear-gradient(rgba(12,25,50,var(--overlay-start,0)),rgba(12,25,50,var(--overlay-end,.4)));
+    position: absolute; */
+    /* top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1; */
+    /* opacity: var(--gradient-opacity,1);
+    -webkit-transition: var(--gradient-transition,opacity 1s .2s);
+    -o-transition: var(--gradient-transition,opacity 1s .2s);
+    transition: var(--gradient-transition,opacity 1s .2s); */
+  }
+  
+  div .featured-images-container img{
+    /* width: 100%;
+    overflow: hidden;
+    -webkit-transform: translateY(var(--offset,0));
+    -ms-transform: translateY(var(--offset,0));
+    transform: translateY(var(--offset,0));
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    -o-transition: transform 1s;
+    transition: transform 1s;
+    transition: transform 1s,-webkit-transform 1s;
+    position: relative; */
   }
 
 /* 
@@ -97,15 +197,16 @@ never any tags that were written above or before.
     
     nav #navbar {
         /* margin-top: 40px; changed to responsive */
+        display: flex;
+        align-items: center;
+        width: 100%;
         margin-top:1%;
         margin-left: auto;
         margin-right: auto;
-        width: 100%;
-        display: flex;
-        align-items: center;
         padding-inline-start: 0px;
         background-color:#7fffd4;
         height:2%;
+        list-style-type: none;
     }
     
     #navbar li {
