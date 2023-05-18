@@ -1,7 +1,6 @@
 
 /* Auto format CSS On MAC OS: command + k + f. */
-/* --------------Universal Selector-------------- */
-/* "*" = Universal Selector, Equals a style rule  that applys to every part of a website. The <body> is also a similar html tag. */
+/* "command" + "/" = CSS comment out */
 
 *{
     font-family: 'Times New Roman', Times, Arial, serif;
@@ -18,8 +17,6 @@ main{
     padding:0 4% 0 4%;
 }
 
-/* --------------Type Selector-------------- */
-/* Refers to a specific Html Tag that is styled the same across a website. */
 
 h1,h2,h3{
     font-variant: small-caps;
@@ -29,8 +26,7 @@ footer{
     text-align: center;
 }
 
-/* --------------(ID Selector)  Start= "#"-------------- */
-/* Adds a style rule to ONE specific Html tag that has the correlating ID. */
+
 
 #main_heading {
     clear: left;
@@ -52,8 +48,7 @@ footer{
     /* margin-left: 5%; */
     text-align: center;
 }
-/* --------------(Class Selector)  Start= "."-------------- */
-/* Adds a style rule to any Html tag that has the correlating class. */
+
 
 .dropdown {
     width: 100%;
@@ -142,39 +137,104 @@ footer{
     width: 100%;
   }
 
- div .feature__overlay{
-    /* --overlay-start:0.0633333;
-    --overlay-end:0.533333;
-
-    background: -webkit-gradient(linear,left top,left bottom,from(rgba(12,25,50,var(--overlay-start,0))),to(rgba(12,25,50,var(--overlay-end,.4))));
-    background: -webkit-linear-gradient(rgba(12,25,50,var(--overlay-start,0)),rgba(12,25,50,var(--overlay-end,.4)));
-    background: -o-linear-gradient(rgba(12,25,50,var(--overlay-start,0)),rgba(12,25,50,var(--overlay-end,.4)));
-    background: linear-gradient(rgba(12,25,50,var(--overlay-start,0)),rgba(12,25,50,var(--overlay-end,.4)));
-    position: absolute; */
-    /* top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1; */
-    /* opacity: var(--gradient-opacity,1);
-    -webkit-transition: var(--gradient-transition,opacity 1s .2s);
-    -o-transition: var(--gradient-transition,opacity 1s .2s);
-    transition: var(--gradient-transition,opacity 1s .2s); */
-  }
   
-  div .featured-images-container img{
-    /* width: 100%;
-    overflow: hidden;
-    -webkit-transform: translateY(var(--offset,0));
-    -ms-transform: translateY(var(--offset,0));
-    transform: translateY(var(--offset,0));
-    -webkit-transition: -webkit-transform 1s;
-    transition: -webkit-transform 1s;
-    -o-transition: transform 1s;
-    transition: transform 1s;
-    transition: transform 1s,-webkit-transform 1s;
-    position: relative; */
-  }
+    
+    nav #navbar {
+        /* margin-top: 40px; changed to responsive */
+        display: grid;
+        grid-template: 1fr/ 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "l-h w-g a-s c-p a-m c-m";
+        place-items: center;
+        text-align: center;
+        /* align-items: center; */
+        width: 100%;
+        margin-top:1%;
+        /* margin-left: auto;
+        margin-right: auto; */
+        padding-inline-start: 0px;
+        background-color:#7fffd4;
+        height:2%;
+        list-style-type: none;
+    }
+
+    #logo-home{
+        grid-area:l-h;
+        height: 100%;
+        width: 100%;
+        /* padding:2%; */
+        border: 1px solid #000;
+    }
+    
+    #work-gallery{
+        grid-area:w-g;
+        height: 100%;
+        width: 100%;
+        /* padding:2%; */
+        border: 1px solid #000;
+    }
+
+    #area-study{
+        grid-area:a-s;
+        height: 100%;
+        width: 100%;
+        /* padding:2%; */
+        border: 1px solid #000;
+    }
+    
+    #creative-process{
+        grid-area:c-p;
+        height: 100%;
+        width: 100%;
+        /* padding:2%; */
+        border: 1px solid #000;
+    }
+
+    #about-me{
+        grid-area:a-m;
+        height: 100%;
+        width: 100%;
+        /* padding:2%; */
+        border: 1px solid #000;
+    }
+
+    #contact-me{
+        grid-area:c-m;
+        height: 100%;
+        width: 100%;
+        /* padding:2%; */
+        border: 1px solid #000;
+    }
+    
+    #navbar a {
+        /* padding: 5%; */
+        text-decoration: none;
+        background-color: #7fffd4;
+        color:#000;
+    }
+
+
+
+
+
+/* More Notes */
+
+
+/* --------------Universal Selector-------------- */
+/* "*" = Universal Selector, Equals a style rule  that applys to every part of a website. The <body> is also a similar html tag. */
+
+
+/* --------------Type Selector-------------- */
+/* Refers to a specific Html Tag that is styled the same across a website. */
+
+
+/* --------------(ID Selector)  Start= "#"-------------- */
+/* Adds a style rule to ONE specific Html tag that has the correlating ID. */
+
+
+/* --------------(Class Selector)  Start= "."-------------- */
+/* Adds a style rule to any Html tag that has the correlating class. */
+
 
 /* 
 --------------Relational Selectors:--------------
@@ -193,46 +253,8 @@ never any tags that were written above or before.
     This includes child selectors and any relations at or below that level.
     Example: (parent) (Descendant), section em, 
 
-    [Make CSS modifications to a tag that is within the same level of relation.]*/  
+    [Make CSS modifications to a tag that is within the same level of relation.]*/ 
     
-    nav #navbar {
-        /* margin-top: 40px; changed to responsive */
-        display: flex;
-        align-items: center;
-        width: 100%;
-        margin-top:1%;
-        margin-left: auto;
-        margin-right: auto;
-        padding-inline-start: 0px;
-        background-color:#7fffd4;
-        height:2%;
-        list-style-type: none;
-    }
-    
-    #navbar li {
-        text-align: center;
-        display: block;
-        float: left;
-        /* padding: 10px;  changed to responsive */ 
-        padding:1%;
-        border: 1px solid #000;
-        flex-basis: 20%;
-        width:16.6666666667%;
-        height:fit-content;
-        
-    }
-    
-    #navbar a {
-        text-align: center;
-        display: block;
-        /* padding: 3px; changed to responsive */
-        padding: 3%;
-        text-decoration: none;
-        background-color: #7fffd4;
-        color:#000;
-        height:fit-content;
-        
-    }
 /* General Sibling Selectors: ~
     Points to a specific html tag to by stylized that is anywhere in the same level of relation.
     It adds the css modifications to any same tags in the same level of relation.
@@ -242,6 +264,7 @@ never any tags that were written above or before.
     Points to an html tag that is directly next to/below the first mentioned tag on the same level of relation.
     Only affects tags that come after the first mentioned tag.
     Example: (first-tag)+(modified/sibling-tag), */
+
 
 /* --------------Combination Selectors--------------
 
@@ -266,12 +289,6 @@ input[type=""] {}
 
 */
 
-
-
-
-/* More Notes */
-
-/* "command" + "/" = CSS comment out */
 
 /* 
 --------------COLOR--------------
