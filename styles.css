@@ -40,7 +40,7 @@ footer{
 }
 
 #home_quote {
-    /* margin-left: 5%; */
+    padding:5%;
     text-align: center;
 }
 
@@ -71,7 +71,7 @@ footer{
   .dropdown-content {
     /* position: absolute; */
     background-color: #f9f9f9;
-    width: 100%;
+    /* width: 100%; */
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     z-index: 1;
@@ -229,12 +229,12 @@ footer{
         text-align: center;
         font-family: "Rubik Puddles", cursive;
         /* src: url("https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap"); */
-        font-size: 400%;
+        font-size: 350%;
         color:#ffffff;
         /* color:#000000; */
         /* text-shadow: 2px 2px rgba(0,0,0,0.8); */
         /* text-shadow: 1px 1px 2px,0 0 2em rgba(0, 0, 255, 0), 0 0 1em blue, 0 0 0.2em blue; */
-        margin: 5% 0 0 0;
+        margin: 0;
         padding:2.5%;
     }
 
@@ -253,6 +253,7 @@ Two Column layout, fluid width/layout.
 */
 .acting-body{ 
     width: 90%;
+    /* height:fit-content; */
     margin: 15px auto 0 auto;
     /* border: 1px solid #000000; */
     background-color: #c170ce8a;
@@ -260,7 +261,7 @@ Two Column layout, fluid width/layout.
 
 
 
-.acting-body aside{
+.acting-body aside {
     width:33%;
     height:350px;
     float:left;
@@ -276,6 +277,7 @@ Two Column layout, fluid width/layout.
     margin: 0;
     padding: 0;
     background-color:#ffffff;
+    /* overflow: auto; */
 }
 
 .about-footer{
@@ -297,6 +299,30 @@ Two Column layout, fluid width/layout.
 
 .acting-body main h2{
     padding-left: 5%;
+}
+
+.about-flexbox{
+    /* display:flex; */
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    height:100%;
+    flex: 1;
+    padding: 10px;
+   
+}
+
+.acting-body main img{
+    float:right;
+    max-width:50%;
+    width:100%;
+    height:auto;
+}
+
+
+/* ---------------------------------- Sub-page: Contact ----------------------------------  */
+.contact-main{
+    padding: 5%;
 }
 
 /* ---------------------------------- Media Queries ----------------------------------  */
@@ -329,8 +355,58 @@ Two Column layout, fluid width/layout.
         border: 1px solid #000;
     }
 }
-  
 
+@media only screen and (max-width: 540px){
+    .font-tryme{
+        text-align: center;
+        font-family: "Rubik Puddles", cursive;
+        /* src: url("https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap"); */
+        font-size: 56px;
+        color:#ffffff;
+        margin: 0;
+        padding:2.5%;
+    }
+}
+
+@media only screen and (max-width: 536px){
+    .font-tryme{
+        text-align: center;
+        font-family: "Rubik Puddles", cursive;
+        /* src: url("https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap"); */
+        font-size: 200%;
+        color:#ffffff;
+        margin: 0;
+        padding:2.5%;
+    }
+}
+  
+@media only screen and (max-width: 333px){
+    body{
+        min-width: 333px;
+    }
+}
+
+/* Adjusts padding to place quote + dropdown button "above the fold"
+
+All other content below is suppopsed to go out of view
+*/
+
+@media screen and (max-width: 820px) and (min-width:655px){
+    #home_quote {
+        padding:10%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 654pxx) and (min-width:333px){
+    #home_quote {
+        padding:10%;
+        text-align: center;
+    }
+    .dropdown{
+        margin-top:20%;
+    }
+}
 
 
 /* More Notes */
