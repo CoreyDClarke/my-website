@@ -3,6 +3,9 @@
 /* "command" + "/" = CSS comment out */
 /* ctrl+f= find a word in document */
 
+
+/* ---------------------------------- Universal CSS presets (Activates on all pages)----------------------------------  */
+
 @font-face{
     font-family: Rubik Puddles;
     src: url("Rubik_Puddles/RubikPuddles-Regular.ttf");
@@ -16,11 +19,86 @@ body{
     width: 100%;
 }
 
-
-.art-state main{
-    /* padding:0 40px 0 40px; changed to responsive */
-    padding:0 4% 0 4%;
+/* 
+This is the main navagation menu that exists on all pages.
+*/    
+nav #navbar {
+    /* margin-top: 40px; changed to responsive */
+    display: grid;
+    grid-template: 1fr/ 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "l-h w-g a-s c-p a-m c-m";
+    place-items: center;
+    text-align: center;
+    /* align-items: center; */
+    width: 100%;
+    margin-top:1%;
+    /* margin-left: auto;
+    margin-right: auto; */
+    padding-inline-start: 0px;
+    /* background-color:#7fffd4; */
+    background-image:linear-gradient(45deg, #80f7db8a , #2e92da8a , #c170ce8a);
+    height:2%;
+    list-style-type: none;
 }
+
+#logo-home{
+    grid-area:l-h;
+    height: 100%;
+    width: 100%;
+    /* padding:2%; */
+    border: 1px solid #000;
+}
+
+#work-gallery{
+    grid-area:w-g;
+    height: 100%;
+    width: 100%;
+    /* padding:2%; */
+    border: 1px solid #000;
+}
+
+#area-study{
+    grid-area:a-s;
+    height: 100%;
+    width: 100%;
+    /* padding:2%; */
+    border: 1px solid #000;
+}
+
+#creative-process{
+    grid-area:c-p;
+    height: 100%;
+    width: 100%;
+    /* padding:2%; */
+    border: 1px solid #000;
+}
+
+#about-me{
+    grid-area:a-m;
+    height: 100%;
+    width: 100%;
+    /* padding:2%; */
+    border: 1px solid #000;
+}
+
+#contact-me{
+    grid-area:c-m;
+    height: 100%;
+    width: 100%;
+    /* padding:2%; */
+    border: 1px solid #000;
+}
+
+#navbar a {
+    /* padding: 5%; */
+    text-decoration: none;
+    /* background-color: #7fffd4; */
+    color:#000;
+}
+/* 
+Navagation ends here.
+*/
 
 
 h1,h2,h3{
@@ -31,59 +109,31 @@ footer{
     text-align: center;
 }
 
+    
 
+/* ---------------------------------- Main page/Home ----------------------------------  */
+
+/* 
+ Homepage section/container that holds:
+    "Under Construction",
+    The currently hidden/deactivated "homepage image grouping"
+    "Creative Works & Artistic Journey,Creativity Portfolio, Corey Clarke (title)"
+*/
 #main_heading {
     /* clear: left; */
     padding: 5%;
     background-color:#2e92da8a;
     margin: 0px 15px 0px 15px;
 }
-
-#home_quote {
-    padding:5%;
-    text-align: center;
-}
+/* 
+ Homepage heading end here.
+*/
 
 
-.dropdown {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    text-align: center;
-    position: relative;
-    display: inline-block;
-  }
-  .dropdown-button:hover {
-    padding:2.5%;
-    font-size:125%;
-
-  }
-
-  .dropdown-button {
-    background-color: #eee;
-    border: none;
-    color: #333;
-    cursor: pointer;
-    padding: 10px 20px;
-  }
-
-  .dropdown-content {
-    /* position: absolute; */
-    background-color: #f9f9f9;
-    /* width: 100%; */
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-  }
-
-  .dropdown:focus .dropdown-button {
-    background-color: #ccc;
-    color: #fff;
-    outline: none;
-  }
-
-  .featured-images-container{
+/* 
+Styles the currently hidden/deactivated image grouping that is only on homepage. 
+*/
+.featured-images-container{
     display:grid;
     grid-template: 1fr/ repeat(5, 20%);
     grid-template-areas: 
@@ -131,95 +181,114 @@ footer{
     max-width: 100%;
     max-height: 30%;
   }
+/* 
+ Homepage image grouping ends here.
+*/
 
-    
-    nav #navbar {
-        /* margin-top: 40px; changed to responsive */
-        display: grid;
-        grid-template: 1fr/ 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-areas: 
-        "l-h w-g a-s c-p a-m c-m";
-        place-items: center;
-        text-align: center;
-        /* align-items: center; */
-        width: 100%;
-        margin-top:1%;
-        /* margin-left: auto;
-        margin-right: auto; */
-        padding-inline-start: 0px;
-        /* background-color:#7fffd4; */
-        background-image:linear-gradient(45deg, #80f7db8a , #2e92da8a , #c170ce8a);
-        height:2%;
-        list-style-type: none;
-    }
 
-    #logo-home{
-        grid-area:l-h;
-        height: 100%;
-        width: 100%;
-        /* padding:2%; */
-        border: 1px solid #000;
-    }
-    
-    #work-gallery{
-        grid-area:w-g;
-        height: 100%;
-        width: 100%;
-        /* padding:2%; */
-        border: 1px solid #000;
-    }
+/* 
+Literalky adds style rules to the quote featured on the homepage.
+*/
+#home_quote {
+    padding:5%;
+    text-align: center;
+}
+/* 
+Quote section ends.
+*/
 
-    #area-study{
-        grid-area:a-s;
-        height: 100%;
-        width: 100%;
-        /* padding:2%; */
-        border: 1px solid #000;
-    }
-    
-    #creative-process{
-        grid-area:c-p;
-        height: 100%;
-        width: 100%;
-        /* padding:2%; */
-        border: 1px solid #000;
-    }
+/* 
+Refers to the dropdown function that gives more info on the quote's author that is found under the "#home_quote".
+*/
+.dropdown {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+  }
 
-    #about-me{
-        grid-area:a-m;
-        height: 100%;
-        width: 100%;
-        /* padding:2%; */
-        border: 1px solid #000;
-    }
+  .dropdown-button {
+    background-color: #eee;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    padding: 10px 20px;
+  }
 
-    #contact-me{
-        grid-area:c-m;
-        height: 100%;
-        width: 100%;
-        /* padding:2%; */
-        border: 1px solid #000;
-    }
-    
-    #navbar a {
-        /* padding: 5%; */
-        text-decoration: none;
-        /* background-color: #7fffd4; */
-        color:#000;
-    }
+  #activate_drop a{
+    text-decoration: none;
+  }
 
-    .art-state{
-        margin: 0px 15px 0px 15px;
-        padding: 5%;
-    }
+  .dropdown-button:hover {
+    padding:2.5%;
+    font-size:125%;
+  }
 
-    .art-state2{
-        border:dashed #000000;
-        padding: 0 5%;
-    }
+  .dropdown:focus .dropdown-button {
+    background-color: #ccc;
+    color: #fff;
+    outline: none;
+  }
+
+  .dropdown-content {
+    /* position: absolute; */
+    background-color: #f9f9f9;
+    /* width: 100%; */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+/* 
+Dropdown CSS ends here.
+*/
+
+/* 
+Not sure what the first style rule does, but these are for styling the "Artist Statement" section that is below the dropdown.
+*/
+.art-state main{
+    /* padding:0 40px 0 40px; changed to responsive */
+    padding:0 4% 0 4%;
+}
+
+.art-state{
+    margin: 0px 15px 0px 15px;
+    padding: 5%;
+}
+
+.art-state2{
+    border:dashed #000000;
+    padding: 0 5%;
+}
+/* 
+End of "Artist Statement" CSS.
+*/
+
+
+
+/* ---------------------------------- Sub-page: All Works ----------------------------------  */
+
+
+
+
+/* ---------------------------------- Sub-page: Areas of Study ----------------------------------  */
+
+
+
 
 /* ---------------------------------- Sub-page: Creative Proccess ----------------------------------  */
 
+/* 
+All the style rulings that modifies the text "Under Construction"
+
+Side-note(s): This may need to be further changed to apply specific style ruling suitable for other sub-pages.
+Currently active on all pages except "About Me" where it is modified.
+
+The background color of the gradient is slightly differnt on the homepage since the colors are transparent. 
+The homepage version has a blue backdrop/background color instead of the white color on all the other pages. 
+*/
     .gradient-me{
         background-image:linear-gradient(45deg, #80f7db8a , #2e92da8a , #c170ce8a);
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -238,12 +307,16 @@ footer{
         padding:2.5%;
     }
 
-
     .font-tryme2{
         font-family: 'Foldit', cursive;
         text-align: center;
         font-size: 300%; 
     }
+/* 
+End of "Under Construction" section.
+*/
+
+
 
 /* ---------------------------------- Sub-page: About Me ----------------------------------  */
 
@@ -252,72 +325,166 @@ footer{
 Two Column layout, fluid width/layout.
 */
 .acting-body{ 
-    width: 90%;
+    width: 95%;
     /* height:fit-content; */
     margin: 15px auto 0 auto;
     /* border: 1px solid #000000; */
     background-color: #c170ce8a;
 }
+/* 
+End of ".acting-body" section.
+*/
 
 
+/* 
+CSS fo the title section of the about me subpage.
+Contains: "About Me" and "Under Constuction"
+*/
+.about-title{
+    display: grid;
+    grid-template: 1fr/ 1fr 1fr;
+    grid-template-areas: 
+    "am am uc";
+    place-items: center;
+    text-align: center;
+    /* align-items: center; */
+    width: 100%;
+    /* margin-left: auto;
+    margin-right: auto; */
+    padding-inline-start: 0px;
+    /* background-color:#7fffd4; */
+    height:10%;
+    list-style-type: none;
+}
 
+.float-l{
+    grid-area:am;
+    padding: 2%;
+    text-align: center;
+}
+
+.acting-body h1{ 
+    margin:0;
+}
+
+.float-r{
+    grid-area:uc;
+}
+
+.float-r .about-gradient-me{
+    background-image:linear-gradient(45deg, #80f7db8a , #2e92da8a , #c170ce8a);
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    padding: 2%;
+}
+
+.float-r .font-tryme{
+    text-align: center;
+    font-family: "Rubik Puddles", cursive;
+    /* src: url("https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap"); */
+    font-size: 200%;
+    color:#ffffff;
+    padding:0;
+    /* margin: 3% 2% 3% 0; */
+}
+/* 
+CSS title section ends.
+*/
+
+
+/* 
+Fixes the aside section to adjust the height relative to the content added.
+*/
+.add-height{
+    height:auto;
+    display: inline-flex
+}
+/* 
+Fixes the aside section end.
+*/
+
+
+/* 
+Style ruling for the aside section.
+*/
 .acting-body aside {
     width:33%;
-    height:350px;
+    height:auto;
     float:left;
     margin: 0;
     padding: 0;
     background-color: #3278a68a;
 }
 
+.acting-body aside h2{
+    padding-left:10%;
+}
+/* 
+End.
+*/
+
+
+/* 
+Style ruling for the all of the main content in the layout.
+*/
 .acting-body main {
     width:67%;
-    height:350px;
     float: right;
     margin: 0;
     padding: 0;
     background-color:#ffffff;
     /* overflow: auto; */
 }
+.acting-body main h2{
+    padding-left: 5%;
+    margin:0;
+}
+/* 
+End.
+*/
 
+
+/* 
+I forgot why I needed this, but it also acts as a container for the main content. 
+It most likely related to me trying to fix the content to grow or flex in size so that content does not overflow?
+*/
+.about-flexbox{
+    /* display:flex; */
+    vertical-align: top;
+    box-sizing: border-box;
+    height:100%;
+    /* padding: 10px; */
+}
+/* 
+End.
+*/
+
+
+/* 
+Makes the images scalable to a certain extent. 
+I may have to make more rulings if other images are added.
+*/
+.acting-body main img{
+    float:right;
+    max-width:40%;
+    width:100%;
+    height:auto;
+}
+/* 
+End.
+*/
+
+/* 
+Styles the footer so that its width ia equal to 100% of it's parent's width.
+Plus other style rulings
+*/
 .about-footer{
     clear:both;
     background-color: #80f7db8a;
     padding: 1.5%;
 }
-
-
-.acting-body h1{ 
-    padding: 5%;
-    margin:0;
-
-}
-
-.acting-body aside h2{
-    padding-left:10%;
-}
-
-.acting-body main h2{
-    padding-left: 5%;
-}
-
-.about-flexbox{
-    /* display:flex; */
-    display: inline-block;
-    vertical-align: top;
-    box-sizing: border-box;
-    height:100%;
-    flex: 1;
-    padding: 10px;
-   
-}
-
-.acting-body main img{
-    float:right;
-    max-width:50%;
-    width:100%;
-    height:auto;
-}
+/* 
+End.
+*/
 
 
 /* ---------------------------------- Sub-page: Contact ----------------------------------  */
@@ -327,6 +494,7 @@ Two Column layout, fluid width/layout.
 
 /* ---------------------------------- Media Queries ----------------------------------  */
 
+/* Changes the nav bar from a 1X6 to a 2X3 layout */
 @media only screen and (max-width:720px) { 
     nav #navbar {
         /* margin-top: 40px; changed to responsive */
@@ -356,6 +524,7 @@ Two Column layout, fluid width/layout.
     }
 }
 
+/* Adjusts the Under Construction lable so that is fits in the page properly */
 @media only screen and (max-width: 540px){
     .font-tryme{
         text-align: center;
@@ -380,6 +549,7 @@ Two Column layout, fluid width/layout.
     }
 }
   
+/* Prevents the screen width from being anything less than 333px*/
 @media only screen and (max-width: 333px){
     body{
         min-width: 333px;
@@ -390,23 +560,54 @@ Two Column layout, fluid width/layout.
 
 All other content below is suppopsed to go out of view
 */
-
-@media screen and (max-width: 820px) and (min-width:655px){
-    #home_quote {
-        padding:10%;
-        text-align: center;
+@media screen and (max-width: 1440px) and (min-width:1189px){
+    #main_heading {
+        padding:2%;
     }
 }
 
-@media screen and (max-width: 654pxx) and (min-width:333px){
+
+@media screen and (max-width: 935px) and (min-width:788px){
     #home_quote {
-        padding:10%;
+        padding:5% 10% 5% 10%;
         text-align: center;
     }
     .dropdown{
-        margin-top:20%;
+        margin-bottom:8%;
     }
 }
+
+@media screen and (max-width: 787px) and (min-width:721px){
+    #home_quote {
+        padding:8% 10% 8% 10%;
+        text-align: center;
+    }
+    .dropdown{
+        margin-bottom:8%;
+    }
+}
+
+@media screen and (max-width: 720px) and (min-width:680px){
+    #home_quote {
+        padding:6% 10% 6% 10%;
+        text-align: center;
+    }
+    .dropdown{
+        margin-bottom:8%;
+    }
+}
+
+@media screen and (max-width: 679px) and (min-width:333px){
+    #home_quote {
+        padding:8% 10% 8% 10%;
+        text-align: center;
+    }
+    .dropdown{
+        margin-bottom:40%;
+    }
+}
+
+
 
 
 /* More Notes */
