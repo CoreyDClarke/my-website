@@ -1,4 +1,3 @@
-
 /* Auto format CSS On MAC OS: command + k + f. */
 /* "command" + "/" = CSS comment out */
 /* ctrl+f= find a word in document */
@@ -6,110 +5,163 @@
 
 /* ---------------------------------- Universal CSS presets (Activates on all pages)----------------------------------  */
 
-@font-face{
+@font-face {
     font-family: Rubik Puddles;
     src: url("Rubik_Puddles/RubikPuddles-Regular.ttf");
 }
-*{
+
+* {
     font-family: 'Times New Roman', Times, Arial, serif;
 }
 
-body{
-    margin:0;
+body {
+    margin: 0;
     width: 100%;
 }
 
 /* 
 This is the main navagation menu that exists on all pages.
-*/    
+*/
+
+#nav_gradient{
+    background-image: linear-gradient(45deg, #80f7db8a, #2e92da8a, #c170ce8a);
+}
+
 nav #navbar {
     /* margin-top: 40px; changed to responsive */
     display: grid;
     grid-template: 1fr/ 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-    "l-h w-g a-s c-p a-m c-m";
+    grid-template-areas:
+        "l-h w-g a-s c-p a-m c-m";
     place-items: center;
     text-align: center;
     /* align-items: center; */
     width: 100%;
-    margin-top:1%;
+    margin-top: 1%;
     /* margin-left: auto;
     margin-right: auto; */
     padding-inline-start: 0px;
     /* background-color:#7fffd4; */
-    background-image:linear-gradient(45deg, #80f7db8a , #2e92da8a , #c170ce8a);
-    height:2%;
+    background-color: #00000000;
+    height: 2%;
     list-style-type: none;
 }
 
-#logo-home{
-    grid-area:l-h;
+#logo-home {
+    grid-area: l-h;
     height: 100%;
     width: 100%;
     /* padding:2%; */
     border: 1px solid #000;
+    background-color: #00000000;
 }
 
-#work-gallery{
-    grid-area:w-g;
+#work-gallery {
+    grid-area: w-g;
     height: 100%;
     width: 100%;
     /* padding:2%; */
     border: 1px solid #000;
+    background-color: #00000000;
 }
 
-#area-study{
-    grid-area:a-s;
+#area-study {
+    grid-area: a-s;
     height: 100%;
     width: 100%;
     /* padding:2%; */
     border: 1px solid #000;
+    background-color: #00000000;
 }
 
-#creative-process{
-    grid-area:c-p;
+#creative-process {
+    grid-area: c-p;
     height: 100%;
     width: 100%;
     /* padding:2%; */
     border: 1px solid #000;
+    background-color: #00000000;
 }
 
-#about-me{
-    grid-area:a-m;
+#about-me {
+    grid-area: a-m;
     height: 100%;
     width: 100%;
     /* padding:2%; */
     border: 1px solid #000;
+    background-color: #00000000;
 }
 
-#contact-me{
-    grid-area:c-m;
+#contact-me {
+    grid-area: c-m;
     height: 100%;
     width: 100%;
     /* padding:2%; */
     border: 1px solid #000;
+    background-color: #00000000;
 }
 
 #navbar a {
     /* padding: 5%; */
     text-decoration: none;
     /* background-color: #7fffd4; */
-    color:#000;
+    color: #000;
+    background-color: #00000000;
 }
+
 /* 
 Navagation ends here.
 */
 
 
-h1,h2,h3{
+h1,
+h2,
+h3 {
     font-variant: small-caps;
 }
 
-footer{
+footer {
     text-align: center;
 }
 
-    
+.gradient-me {
+    background-image: linear-gradient(45deg, #80f7db8a, #2e92da8a, #c170ce8a);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template: 1fr/ 1fr 1fr 1fr;
+    grid-template-areas:
+        "icon1 uncon icon2";
+    place-items: center;
+    text-align: center;
+    width: 100%;
+    padding-inline-start: 0px;
+}
+
+.font-tryme {
+    text-align: center;
+    font-family: "Rubik Puddles", cursive;
+    /* src: url("https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap"); */
+    font-size: 350%;
+    color: #ffffff;
+    /* color:#000000; */
+    /* text-shadow: 2px 2px rgba(0,0,0,0.8); */
+    /* text-shadow: 1px 1px 2px,0 0 2em rgba(0, 0, 255, 0), 0 0 1em blue, 0 0 0.2em blue; */
+    margin: 0;
+    padding: 2.5%;
+    grid-area: uncon;
+}
+
+.fa-screwdriver-wrench {
+    color: #afafaf;
+    grid-area: icon1;
+    font-size: 3em;
+}
+
+.fa-helmet-safety {
+    color: #efc84f;
+    grid-area: icon2;
+    font-size: 3em;
+}
 
 /* ---------------------------------- Main page/Home ----------------------------------  */
 
@@ -122,9 +174,10 @@ footer{
 #main_heading {
     /* clear: left; */
     padding: 5%;
-    background-color:#2e92da8a;
+    background-color: #2e92da8a;
     margin: 0px 15px 0px 15px;
 }
+
 /* 
  Homepage heading end here.
 */
@@ -133,15 +186,15 @@ footer{
 /* 
 Styles the currently hidden/deactivated image grouping that is only on homepage. 
 */
-.featured-images-container{
-    display:grid;
+.featured-images-container {
+    display: grid;
     grid-template: 1fr/ repeat(5, 20%);
-    grid-template-areas: 
-    "img1 img2 img3 img4 img5";
-    height:744px;
+    grid-template-areas:
+        "img1 img2 img3 img4 img5";
+    height: 744px;
     width: 80%;
     list-style-type: none;
-    overflow:hidden;
+    overflow: hidden;
     justify-items: center;
     grid-auto-flow: column;
     list-style: none;
@@ -149,38 +202,39 @@ Styles the currently hidden/deactivated image grouping that is only on homepage.
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-  }
+}
 
-  .image_item1{
-    grid-area:img1;
+.image_item1 {
+    grid-area: img1;
     max-width: 100%;
     max-height: 30%;
-    
-  }
 
-  .image_item2{
-    grid-area:img2;
+}
+
+.image_item2 {
+    grid-area: img2;
     max-width: 100%;
     max-height: 30%;
-  }
+}
 
-  .image_item3{
-    grid-area:img3;
+.image_item3 {
+    grid-area: img3;
     max-width: 100%;
     max-height: 30%;
-  }
+}
 
-  .image_item4{
-    grid-area:img4;
+.image_item4 {
+    grid-area: img4;
     max-width: 100%;
     max-height: 30%;
-  }
+}
 
-  .image_item5{
-    grid-area:img5;
+.image_item5 {
+    grid-area: img5;
     max-width: 100%;
     max-height: 30%;
-  }
+}
+
 /* 
  Homepage image grouping ends here.
 */
@@ -190,9 +244,10 @@ Styles the currently hidden/deactivated image grouping that is only on homepage.
 Literalky adds style rules to the quote featured on the homepage.
 */
 #home_quote {
-    padding:5%;
+    padding: 5%;
     text-align: center;
 }
+
 /* 
 Quote section ends.
 */
@@ -208,39 +263,40 @@ Refers to the dropdown function that gives more info on the quote's author that 
     text-align: center;
     position: relative;
     display: inline-block;
-  }
+}
 
-  .dropdown-button {
+.dropdown-button {
     background-color: #eee;
     border: none;
     color: #333;
     cursor: pointer;
     padding: 10px 20px;
-  }
+}
 
-  #activate_drop a{
+#activate_drop a {
     text-decoration: none;
-  }
+}
 
-  .dropdown-button:hover {
-    padding:2.5%;
-    font-size:125%;
-  }
+.dropdown-button:hover {
+    padding: 2.5%;
+    font-size: 125%;
+}
 
-  .dropdown:focus .dropdown-button {
+.dropdown:focus .dropdown-button {
     background-color: #ccc;
     color: #fff;
     outline: none;
-  }
+}
 
-  .dropdown-content {
+.dropdown-content {
     /* position: absolute; */
     background-color: #f9f9f9;
     /* width: 100%; */
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 12px 16px;
     z-index: 1;
-  }
+}
+
 /* 
 Dropdown CSS ends here.
 */
@@ -248,20 +304,21 @@ Dropdown CSS ends here.
 /* 
 Not sure what the first style rule does, but these are for styling the "Artist Statement" section that is below the dropdown.
 */
-.art-state main{
+.art-state main {
     /* padding:0 40px 0 40px; changed to responsive */
-    padding:0 4% 0 4%;
+    padding: 0 4% 0 4%;
 }
 
-.art-state{
+.art-state {
     margin: 0px 15px 0px 15px;
     padding: 5%;
 }
 
-.art-state2{
-    border:dashed #000000;
+.art-state2 {
+    border: dashed #000000;
     padding: 0 5%;
 }
+
 /* 
 End of "Artist Statement" CSS.
 */
@@ -289,33 +346,40 @@ Currently active on all pages except "About Me" where it is modified.
 The background color of the gradient is slightly differnt on the homepage since the colors are transparent. 
 The homepage version has a blue backdrop/background color instead of the white color on all the other pages. 
 */
-    .gradient-me{
+/* .gradient-me{
         background-image:linear-gradient(45deg, #80f7db8a , #2e92da8a , #c170ce8a);
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     }
-
     .font-tryme{
         text-align: center;
         font-family: "Rubik Puddles", cursive;
-        /* src: url("https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap"); */
+        / src: url("https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap"); /
         font-size: 350%;
         color:#ffffff;
-        /* color:#000000; */
-        /* text-shadow: 2px 2px rgba(0,0,0,0.8); */
-        /* text-shadow: 1px 1px 2px,0 0 2em rgba(0, 0, 255, 0), 0 0 1em blue, 0 0 0.2em blue; */
+        / color:#000000;
+         text-shadow: 2px 2px rgba(0,0,0,0.8); 
+         text-shadow: 1px 1px 2px,0 0 2em rgba(0, 0, 255, 0), 0 0 1em blue, 0 0 0.2em blue; /
         margin: 0;
         padding:2.5%;
-    }
+    } */
 
-    .font-tryme2{
-        font-family: 'Foldit', cursive;
-        text-align: center;
-        font-size: 300%; 
-    }
+.font-tryme2 {
+    font-family: 'Foldit', cursive;
+    text-align: center;
+    font-size: 300%;
+}
+
 /* 
 End of "Under Construction" section.
 */
 
+.acting-grid1 {
+    grid-area: icon1;
+}
+
+.acting-grid2 {
+    grid-area: icon2;
+}
 
 
 /* ---------------------------------- Sub-page: About Me ----------------------------------  */
@@ -324,13 +388,14 @@ End of "Under Construction" section.
 
 Two Column layout, fluid width/layout.
 */
-.acting-body{ 
+.acting-body {
     width: 95%;
     /* height:fit-content; */
     margin: 15px auto 0 auto;
     /* border: 1px solid #000000; */
     background-color: #c170ce8a;
 }
+
 /* 
 End of ".acting-body" section.
 */
@@ -340,11 +405,11 @@ End of ".acting-body" section.
 CSS fo the title section of the about me subpage.
 Contains: "About Me" and "Under Constuction"
 */
-.about-title{
+.about-title {
     display: grid;
     grid-template: 1fr/ 1fr 1fr;
-    grid-template-areas: 
-    "am am uc";
+    grid-template-areas:
+        "am am uc";
     place-items: center;
     text-align: center;
     /* align-items: center; */
@@ -353,39 +418,40 @@ Contains: "About Me" and "Under Constuction"
     margin-right: auto; */
     padding-inline-start: 0px;
     /* background-color:#7fffd4; */
-    height:10%;
+    height: 10%;
     list-style-type: none;
 }
 
-.float-l{
-    grid-area:am;
+.float-l {
+    grid-area: am;
     padding: 2%;
     text-align: center;
 }
 
-.acting-body h1{ 
-    margin:0;
+.acting-body h1 {
+    margin: 0;
 }
 
-.float-r{
-    grid-area:uc;
+.float-r {
+    grid-area: uc;
 }
 
-.float-r .about-gradient-me{
-    background-image:linear-gradient(45deg, #80f7db8a , #2e92da8a , #c170ce8a);
+.float-r .about-gradient-me {
+    background-image: linear-gradient(45deg, #80f7db8a, #2e92da8a, #c170ce8a);
     /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
     padding: 2%;
 }
 
-.float-r .font-tryme{
+.float-r .font-tryme {
     text-align: center;
     font-family: "Rubik Puddles", cursive;
     /* src: url("https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap"); */
     font-size: 200%;
-    color:#ffffff;
-    padding:0;
+    color: #ffffff;
+    padding: 0;
     /* margin: 3% 2% 3% 0; */
 }
+
 /* 
 CSS title section ends.
 */
@@ -394,10 +460,11 @@ CSS title section ends.
 /* 
 Fixes the aside section to adjust the height relative to the content added.
 */
-.add-height{
-    height:auto;
+.add-height {
+    height: auto;
     display: inline-flex
 }
+
 /* 
 Fixes the aside section end.
 */
@@ -407,17 +474,18 @@ Fixes the aside section end.
 Style ruling for the aside section.
 */
 .acting-body aside {
-    width:33%;
-    height:auto;
-    float:left;
+    width: 33%;
+    height: auto;
+    float: left;
     margin: 0;
     padding: 0;
     background-color: #3278a68a;
 }
 
-.acting-body aside h2{
-    padding-left:10%;
+.acting-body aside h2 {
+    padding-left: 10%;
 }
+
 /* 
 End.
 */
@@ -427,17 +495,19 @@ End.
 Style ruling for the all of the main content in the layout.
 */
 .acting-body main {
-    width:67%;
+    width: 67%;
     float: right;
     margin: 0;
     padding: 0;
-    background-color:#ffffff;
+    background-color: #ffffff;
     /* overflow: auto; */
 }
-.acting-body main h2{
+
+.acting-body main h2 {
     padding-left: 5%;
-    margin:0;
+    margin: 0;
 }
+
 /* 
 End.
 */
@@ -447,13 +517,14 @@ End.
 I forgot why I needed this, but it also acts as a container for the main content. 
 It most likely related to me trying to fix the content to grow or flex in size so that content does not overflow?
 */
-.about-flexbox{
+.about-flexbox {
     /* display:flex; */
     vertical-align: top;
     box-sizing: border-box;
-    height:100%;
+    height: 100%;
     /* padding: 10px; */
 }
+
 /* 
 End.
 */
@@ -463,12 +534,13 @@ End.
 Makes the images scalable to a certain extent. 
 I may have to make more rulings if other images are added.
 */
-.acting-body main img{
-    float:right;
-    max-width:40%;
-    width:100%;
-    height:auto;
+.acting-body main img {
+    float: right;
+    max-width: 40%;
+    width: 100%;
+    height: auto;
 }
+
 /* 
 End.
 */
@@ -477,81 +549,150 @@ End.
 Styles the footer so that its width ia equal to 100% of it's parent's width.
 Plus other style rulings
 */
-.about-footer{
-    clear:both;
+.about-footer {
+    clear: both;
     background-color: #80f7db8a;
     padding: 1.5%;
 }
+
 /* 
 End.
 */
 
 
 /* ---------------------------------- Sub-page: Contact ----------------------------------  */
-.contact-main{
+.contact-main {
     padding: 5%;
 }
 
 /* ---------------------------------- Media Queries ----------------------------------  */
 
 /* Changes the nav bar from a 1X6 to a 2X3 layout */
-@media only screen and (max-width:720px) { 
+@media only screen and (max-width:720px) {
+    #nav_gradient{
+        background-image: radial-gradient(farthest-corner at 20% 90%,
+                #80f7db8a,
+                #2e92da8a,
+                #c170ce8a);
+    }
     nav #navbar {
         /* margin-top: 40px; changed to responsive */
+        /* background-color: #ffffff; */
         display: grid;
         grid-template: 1fr 1fr/ 1fr 1fr 1fr;
-        grid-template-areas: 
-        "l-h w-g a-s"
-        "c-p a-m c-m";
+        grid-template-areas:
+            "l-h w-g a-s"
+            "c-p a-m c-m";
         place-items: center;
         text-align: center;
         grid-gap: 10px;
         /* align-items: center; */
         width: 100%;
-        margin-top:1%;
+        margin-top: 1%;
         /* margin-left: auto;
         margin-right: auto; */
         padding-inline-start: 0px;
-        background-image: radial-gradient(farthest-corner at 20% 90%,
-        #80f7db8a,
-        #2e92da8a,
-        #c170ce8a);
-        height:5%;
+        height: 5%;
         list-style-type: none;
     }
-    #navbar{
-        border: 1px solid #000;
+
+    #logo-home {
+        grid-area: l-h;
+        height: 100%;
+        width: 100%;
+        /* padding:2%; */
+        box-shadow: 0 0 0 1px  #000;
+        box-shadow: 0 0 0 10px #ffffff;
+        background-color: #00000000;
+    }
+    
+    #work-gallery {
+        grid-area: w-g;
+        height: 100%;
+        width: 100%;
+        /* padding:2%; */
+        box-shadow: 0 0 0 1px  #000;
+        box-shadow: 0 0 0 10px #ffffff;
+        background-color: #00000000;
+    }
+    
+    #area-study {
+        grid-area: a-s;
+        height: 100%;
+        width: 100%;
+        /* padding:2%; */
+        box-shadow: 0 0 0 1px  #000;
+        box-shadow: 0 0 0 10px #ffffff;
+        background-color: #00000000;
+    }
+    
+    #creative-process {
+        grid-area: c-p;
+        height: 100%;
+        width: 100%;
+        /* padding:2%; */
+        box-shadow: 0 0 0 1px  #000;
+        box-shadow: 0 0 0 10px #ffffff;
+        background-color: #00000000;
+    }
+    
+    #about-me {
+        grid-area: a-m;
+        height: 100%;
+        width: 100%;
+        /* padding:2%; */
+        box-shadow: 0 0 0 1px  #000;
+        box-shadow: 0 0 0 10px #ffffff;
+        background-color: #00000000;
+    }
+    
+    #contact-me {
+        grid-area: c-m;
+        height: 100%;
+        width: 100%;
+        /* padding:2%; */
+        box-shadow: 0 0 0 1px  #000;
+        box-shadow: 0 0 0 10px #ffffff;
+        background-color: #00000000;
+    }
+    
+    #navbar a {
+        /* padding: 5%; */
+        text-decoration: none;
+        /* background-color: #7fffd4; */
+        color: #000;
+        background-color: #00000000;
     }
 }
 
 /* Adjusts the Under Construction lable so that is fits in the page properly */
-@media only screen and (max-width: 540px){
-    .font-tryme{
+@media only screen and (max-width: 540px) {
+    .font-tryme {
         text-align: center;
         font-family: "Rubik Puddles", cursive;
         /* src: url("https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap"); */
         font-size: 56px;
-        color:#ffffff;
+        color: #ffffff;
         margin: 0;
-        padding:2.5%;
+        padding: 2.5%;
     }
 }
 
-@media only screen and (max-width: 536px){
-    .font-tryme{
+@media only screen and (max-width: 536px) {
+    .font-tryme {
         text-align: center;
         font-family: "Rubik Puddles", cursive;
         /* src: url("https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap"); */
         font-size: 200%;
-        color:#ffffff;
+        color: #ffffff;
         margin: 0;
-        padding:2.5%;
+        padding: 2.5%;
     }
 }
-  
+
 /* Prevents the screen width from being anything less than 333px*/
-@media only screen and (max-width: 333px){
-    body{
+@media only screen and (max-width: 333px) {
+    body {
         min-width: 333px;
     }
 }
@@ -560,50 +701,54 @@ End.
 
 All other content below is suppopsed to go out of view
 */
-@media screen and (max-width: 1440px) and (min-width:1189px){
+@media screen and (max-width: 1440px) and (min-width:1189px) {
     #main_heading {
-        padding:2%;
+        padding: 2%;
     }
 }
 
 
-@media screen and (max-width: 935px) and (min-width:788px){
+@media screen and (max-width: 935px) and (min-width:788px) {
     #home_quote {
-        padding:5% 10% 5% 10%;
+        padding: 5% 10% 5% 10%;
         text-align: center;
     }
-    .dropdown{
-        margin-bottom:8%;
+
+    .dropdown {
+        margin-bottom: 8%;
     }
 }
 
-@media screen and (max-width: 787px) and (min-width:721px){
+@media screen and (max-width: 787px) and (min-width:721px) {
     #home_quote {
-        padding:8% 10% 8% 10%;
+        padding: 8% 10% 8% 10%;
         text-align: center;
     }
-    .dropdown{
-        margin-bottom:8%;
+
+    .dropdown {
+        margin-bottom: 8%;
     }
 }
 
-@media screen and (max-width: 720px) and (min-width:680px){
+@media screen and (max-width: 720px) and (min-width:680px) {
     #home_quote {
-        padding:6% 10% 6% 10%;
+        padding: 6% 10% 6% 10%;
         text-align: center;
     }
-    .dropdown{
-        margin-bottom:8%;
+
+    .dropdown {
+        margin-bottom: 8%;
     }
 }
 
-@media screen and (max-width: 679px) and (min-width:333px){
+@media screen and (max-width: 679px) and (min-width:333px) {
     #home_quote {
-        padding:8% 10% 8% 10%;
+        padding: 8% 10% 8% 10%;
         text-align: center;
     }
-    .dropdown{
-        margin-bottom:40%;
+
+    .dropdown {
+        margin-bottom: 40%;
     }
 }
 
@@ -634,20 +779,20 @@ All other content below is suppopsed to go out of view
 All of these relational selectors only affect tags that come after the first mentioned tag, 
 never any tags that were written above or before.
 
-    [Make CSS modifications to a tag within a specified parent tag.]*/ 
+    [Make CSS modifications to a tag within a specified parent tag.]*/
 
 /* Child Selectors: >
     Points to any specific html tag (child) that exists within a (parent) html tag that is directly one relation over to get modified.
     It only adds the css modifications to the child, may add style to more than one child with the same tag.
     Example: (parent)>(child), body>header */
-    
+
 /* Descendant Selectors:
     Refers to any html tag (Descendant) that is within a specfied (Parent) html tag to be modified.
     This includes child selectors and any relations at or below that level.
     Example: (parent) (Descendant), section em, 
 
-    [Make CSS modifications to a tag that is within the same level of relation.]*/ 
-    
+    [Make CSS modifications to a tag that is within the same level of relation.]*/
+
 /* General Sibling Selectors: ~
     Points to a specific html tag to by stylized that is anywhere in the same level of relation.
     It adds the css modifications to any same tags in the same level of relation.
