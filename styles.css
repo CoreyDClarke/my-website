@@ -22,7 +22,6 @@ body {
 /* 
 This is the main navagation menu that exists on all pages.
 */
-
 #nav_gradient{
     background-image: linear-gradient(45deg, #80f7db8a, #2e92da8a, #c170ce8a);
 }
@@ -108,7 +107,6 @@ nav #navbar {
     color: #000;
     background-color: #00000000;
 }
-
 /* 
 Navagation ends here.
 */
@@ -128,7 +126,7 @@ footer {
     background-image: linear-gradient(45deg, #80f7db8a, #2e92da8a, #c170ce8a);
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     display: grid;
-    grid-template: 1fr/ 1fr 1fr 1fr;
+    grid-template: 1fr/ 20% 60% 20%;
     grid-template-areas:
         "icon1 uncon icon2";
     place-items: center;
@@ -137,18 +135,21 @@ footer {
     padding-inline-start: 0px;
 }
 
+.gradient-me strong{
+    grid-area: uncon;
+}
+
 .font-tryme {
     text-align: center;
     font-family: "Rubik Puddles", cursive;
     /* src: url("https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap"); */
-    font-size: 350%;
+    font-size:5vw;
     color: #ffffff;
     /* color:#000000; */
     /* text-shadow: 2px 2px rgba(0,0,0,0.8); */
     /* text-shadow: 1px 1px 2px,0 0 2em rgba(0, 0, 255, 0), 0 0 1em blue, 0 0 0.2em blue; */
     margin: 0;
     padding: 2.5%;
-    grid-area: uncon;
 }
 
 .fa-screwdriver-wrench {
@@ -234,7 +235,6 @@ Styles the currently hidden/deactivated image grouping that is only on homepage.
     max-width: 100%;
     max-height: 30%;
 }
-
 /* 
  Homepage image grouping ends here.
 */
@@ -296,7 +296,6 @@ Refers to the dropdown function that gives more info on the quote's author that 
     padding: 12px 16px;
     z-index: 1;
 }
-
 /* 
 Dropdown CSS ends here.
 */
@@ -705,58 +704,80 @@ All other content below is suppopsed to go out of view
     #main_heading {
         padding: 2%;
     }
-}
-
-
-@media screen and (max-width: 935px) and (min-width:788px) {
     #home_quote {
         padding: 5% 10% 5% 10%;
         text-align: center;
     }
-
+    .dropdown {
+        margin-bottom: 10%;
+    }
+}
+@media screen and (max-width: 1189px) and (min-width:935px) {
+    #main_heading {
+        padding: 2%;
+    }
+    #home_quote {
+        padding: 9% 10% 9% 10%;
+        text-align: center;
+    }
     .dropdown {
         margin-bottom: 8%;
+    }
+}
+
+@media screen and (max-width: 935px) and (min-width:788px) {
+    #home_quote {
+        padding: 10% 10% 10% 10%;
+        text-align: center;
+    }
+
+    .dropdown {
+        margin-bottom: 10%;
     }
 }
 
 @media screen and (max-width: 787px) and (min-width:721px) {
     #home_quote {
-        padding: 8% 10% 8% 10%;
+        padding: 12% 10% 12% 10%;
         text-align: center;
     }
 
     .dropdown {
-        margin-bottom: 8%;
+        margin-bottom: 10%;
     }
 }
 
 @media screen and (max-width: 720px) and (min-width:680px) {
     #home_quote {
-        padding: 6% 10% 6% 10%;
+        padding: 12% 10% 12% 10%;
         text-align: center;
     }
 
     .dropdown {
-        margin-bottom: 8%;
+        margin-bottom: 12%;
     }
 }
 
 @media screen and (max-width: 679px) and (min-width:333px) {
     #home_quote {
-        padding: 8% 10% 8% 10%;
+        padding: 16% 10% 16% 10%;
         text-align: center;
     }
 
     .dropdown {
-        margin-bottom: 40%;
+        margin-bottom: 35%;
     }
 }
+
+/* Notes for fixing the icon and "Under Construction" break on the homepage.
+
+
+*/
 
 
 
 
 /* More Notes */
-
 
 /* --------------Universal Selector-------------- */
 /* "*" = Universal Selector, Equals a style rule  that applys to every part of a website. The <body> is also a similar html tag. */
