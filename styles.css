@@ -2,7 +2,8 @@
 /* "command" + "/" = CSS comment out */
 /* ctrl+f= find a word in document */
 
-
+/* display:block;
+display:none; */
 /* ---------------------------------- Universal CSS presets (Activates on all pages)----------------------------------  */
 
 @font-face {
@@ -106,6 +107,15 @@ nav #navbar {
     /* background-color: #7fffd4; */
     color: #000;
     background-color: #00000000;
+}
+
+#nav_gradient li:hover{
+    background-color:  #38597480;
+    background-blend-mode: multiply;
+}
+
+#nav_gradient a:hover{
+    color: white;
 }
 /* 
 Navagation ends here.
@@ -245,7 +255,17 @@ Literalky adds style rules to the quote featured on the homepage.
 */
 #home_quote {
     padding: 5%;
+    margin: 0px 15px 0px 15px;
     text-align: center;
+    background-image: url("images-4-web/rainbow-print-the-mask.jpg") ;
+    /* background-image: url("images-4-web/cloudy-blue-sky.jpeg") ; */
+    background-size:cover;
+    /* background-color: rgb(162, 162, 162); */
+    background-color:  #95c4eb;
+    background-blend-mode: multiply;
+}
+#home_quote blockquote{
+    color:#ffffff;
 }
 
 /* 
@@ -296,6 +316,10 @@ Refers to the dropdown function that gives more info on the quote's author that 
     padding: 12px 16px;
     z-index: 1;
 }
+.gradient2back{
+    background-image: linear-gradient(45deg, #80f7db8a, #2e92da8a, #c170ce8a);
+}
+
 /* 
 Dropdown CSS ends here.
 */
@@ -380,6 +404,16 @@ End of "Under Construction" section.
     grid-area: icon2;
 }
 
+.adjust-padding{
+    /* width: 95%; */
+    margin: 0px 15px 0px 15px;
+    text-align: center;
+}
+
+.proccess-image{
+    max-width: 30%;
+    height: auto;
+}
 
 /* ---------------------------------- Sub-page: About Me ----------------------------------  */
 
@@ -705,11 +739,11 @@ All other content below is suppopsed to go out of view
         padding: 2%;
     }
     #home_quote {
-        padding: 5% 10% 5% 10%;
+        padding: 12% 10% 12% 10%;
         text-align: center;
     }
     .dropdown {
-        margin-bottom: 10%;
+        margin-bottom: 30%;
     }
 }
 @media screen and (max-width: 1189px) and (min-width:935px) {
@@ -717,50 +751,50 @@ All other content below is suppopsed to go out of view
         padding: 2%;
     }
     #home_quote {
-        padding: 9% 10% 9% 10%;
+        padding: 20% 10% 20% 10%;
         text-align: center;
     }
     .dropdown {
-        margin-bottom: 8%;
+        margin-bottom: 20%;
     }
 }
 
 @media screen and (max-width: 935px) and (min-width:788px) {
     #home_quote {
-        padding: 10% 10% 10% 10%;
+        padding: 20% 10% 20% 10%;
         text-align: center;
     }
 
     .dropdown {
-        margin-bottom: 10%;
+        margin-bottom: 20%;
     }
 }
 
 @media screen and (max-width: 787px) and (min-width:721px) {
     #home_quote {
-        padding: 12% 10% 12% 10%;
+        padding: 20% 10% 20% 10%;
         text-align: center;
     }
 
     .dropdown {
-        margin-bottom: 10%;
+        margin-bottom: 30%;
     }
 }
 
 @media screen and (max-width: 720px) and (min-width:680px) {
     #home_quote {
-        padding: 12% 10% 12% 10%;
+        padding: 20% 10% 20% 10%;
         text-align: center;
     }
 
     .dropdown {
-        margin-bottom: 12%;
+        margin-bottom: 35%;
     }
 }
 
 @media screen and (max-width: 679px) and (min-width:333px) {
     #home_quote {
-        padding: 16% 10% 16% 10%;
+        padding: 20% 10% 20% 10%;
         text-align: center;
     }
 
