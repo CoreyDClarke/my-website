@@ -11,6 +11,12 @@ display:none; */
     src: url("Rubik_Puddles/RubikPuddles-Regular.ttf");
 }
 
+:root{
+    --font-content-line-height: 1.75; 
+    /* --type-smaller-font-size: 0.833rem !important; */
+}
+
+
 * {
     font-family: 'Times New Roman', Times, Arial, serif;
 }
@@ -18,6 +24,19 @@ display:none; */
 body {
     margin: 0;
     width: 100%;
+}
+
+p{
+    line-height: var(--font-content-line-height);
+}
+
+#navbar li.on-page{
+    background-color:  #38597480;
+    background-blend-mode: multiply;
+}
+
+#navbar .on-page a{
+    color: white;
 }
 
 /* 
@@ -114,7 +133,7 @@ nav #navbar {
     background-blend-mode: multiply;
 }
 
-#nav_gradient a:hover{
+#nav_gradient li:hover a{
     color: white;
 }
 /* 
@@ -184,11 +203,20 @@ footer {
 */
 #main_heading {
     /* clear: left; */
-    padding: 5%;
+    padding: 5% 10% 5% 10%;
+    background-image: url("images-4-web/rainbow-print-the-mask.jpg") ;
+    background-size:cover;
+    background-blend-mode: multiply;
     background-color: #2e92da8a;
     margin: 0px 15px 0px 15px;
 }
+.gradient-title{
+    background-image: linear-gradient(45deg, #80f7db, #2e92da, #c170ce8a);
+}
 
+ h1 .gradient-title{
+   margin-right:20%;
+}
 /* 
  Homepage heading end here.
 */
@@ -257,15 +285,10 @@ Literalky adds style rules to the quote featured on the homepage.
     padding: 5%;
     margin: 0px 15px 0px 15px;
     text-align: center;
-    background-image: url("images-4-web/rainbow-print-the-mask.jpg") ;
-    /* background-image: url("images-4-web/cloudy-blue-sky.jpeg") ; */
-    background-size:cover;
-    /* background-color: rgb(162, 162, 162); */
     background-color:  #95c4eb;
-    background-blend-mode: multiply;
 }
 #home_quote blockquote{
-    color:#ffffff;
+    color:#000000;
 }
 
 /* 
@@ -309,6 +332,7 @@ Refers to the dropdown function that gives more info on the quote's author that 
 }
 
 .dropdown-content {
+    display:none;
     /* position: absolute; */
     background-color: #f9f9f9;
     /* width: 100%; */
@@ -333,13 +357,13 @@ Not sure what the first style rule does, but these are for styling the "Artist S
 }
 
 .art-state {
-    margin: 0px 15px 0px 15px;
-    padding: 5%;
+    margin:  15px 0px 15px 0px;
+   
 }
 
 .art-state2 {
     border: dashed #000000;
-    padding: 0 5%;
+    margin: 0 5%;
 }
 
 /* 
@@ -384,17 +408,17 @@ The homepage version has a blue backdrop/background color instead of the white c
          text-shadow: 1px 1px 2px,0 0 2em rgba(0, 0, 255, 0), 0 0 1em blue, 0 0 0.2em blue; /
         margin: 0;
         padding:2.5%;
-    } */
+    } 
 
 .font-tryme2 {
     font-family: 'Foldit', cursive;
     text-align: center;
     font-size: 300%;
-}
-
+}*/
 /* 
 End of "Under Construction" section.
 */
+
 
 .acting-grid1 {
     grid-area: icon1;
@@ -404,14 +428,26 @@ End of "Under Construction" section.
     grid-area: icon2;
 }
 
+.creative-format{
+    margin: 0px 15px 0px 15px;
+}
+
+.creative-format h1, .creative-format p{
+    padding:1% 5% 1% 5%;
+}
+
+.box-color{
+padding:1% 5% 1% 5%;
+background-color: #2e92da8a;
+}
+
 .adjust-padding{
     /* width: 95%; */
-    margin: 0px 15px 0px 15px;
     text-align: center;
 }
 
 .proccess-image{
-    max-width: 30%;
+    max-width: 20%;
     height: auto;
 }
 
@@ -428,7 +464,6 @@ Two Column layout, fluid width/layout.
     /* border: 1px solid #000000; */
     background-color: #c170ce8a;
 }
-
 /* 
 End of ".acting-body" section.
 */
@@ -515,7 +550,7 @@ Style ruling for the aside section.
     background-color: #3278a68a;
 }
 
-.acting-body aside h2 {
+.acting-body aside h2, h3 {
     padding-left: 10%;
 }
 
@@ -541,6 +576,9 @@ Style ruling for the all of the main content in the layout.
     margin: 0;
 }
 
+.about-image{
+    padding: 0% 0% 5% 5%;
+}
 /* 
 End.
 */
@@ -734,12 +772,13 @@ End.
 
 All other content below is suppopsed to go out of view
 */
-@media screen and (max-width: 1440px) and (min-width:1189px) {
+@media screen and (max-width: 1920px) and (min-width:1189px) {
+    
     #main_heading {
-        padding: 2%;
+        padding: 29% 19% 1% 1%;
     }
     #home_quote {
-        padding: 12% 10% 12% 10%;
+        padding: 5% 10% 5% 10%;
         text-align: center;
     }
     .dropdown {
@@ -748,10 +787,10 @@ All other content below is suppopsed to go out of view
 }
 @media screen and (max-width: 1189px) and (min-width:935px) {
     #main_heading {
-        padding: 2%;
+        padding: 29% 19% 1% 1%;
     }
     #home_quote {
-        padding: 20% 10% 20% 10%;
+        padding: 5% 10% 5% 10%;
         text-align: center;
     }
     .dropdown {
@@ -760,8 +799,11 @@ All other content below is suppopsed to go out of view
 }
 
 @media screen and (max-width: 935px) and (min-width:788px) {
+    #main_heading {
+        padding: 29% 19% 1% 1%;
+    }
     #home_quote {
-        padding: 20% 10% 20% 10%;
+        padding: 5% 10% 5% 10%;
         text-align: center;
     }
 
@@ -771,8 +813,11 @@ All other content below is suppopsed to go out of view
 }
 
 @media screen and (max-width: 787px) and (min-width:721px) {
+    #main_heading {
+        padding: 29% 19% 1% 1%;
+    }
     #home_quote {
-        padding: 20% 10% 20% 10%;
+        padding: 5% 10% 5% 10%;
         text-align: center;
     }
 
@@ -782,8 +827,11 @@ All other content below is suppopsed to go out of view
 }
 
 @media screen and (max-width: 720px) and (min-width:680px) {
+    #main_heading {
+        padding: 29% 19% 1% 1%;
+    }
     #home_quote {
-        padding: 20% 10% 20% 10%;
+        padding: 5% 10% 5% 10%;
         text-align: center;
     }
 
@@ -793,8 +841,11 @@ All other content below is suppopsed to go out of view
 }
 
 @media screen and (max-width: 679px) and (min-width:333px) {
+    #main_heading {
+        padding: 29% 19% 1% 1%;
+    }
     #home_quote {
-        padding: 20% 10% 20% 10%;
+        padding: 5% 10% 5% 10%;
         text-align: center;
     }
 
