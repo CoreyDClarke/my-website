@@ -3,7 +3,12 @@
 /* ctrl+f= find a word in document */
 
 /* display:block;
-display:none; */
+display:none; 
+
+
+note: Create Sticky navagation
+*/
+
 /* ---------------------------------- Universal CSS presets (Activates on all pages)----------------------------------  */
 
 @font-face {
@@ -11,8 +16,8 @@ display:none; */
     src: url("Rubik_Puddles/RubikPuddles-Regular.ttf");
 }
 
-:root{
-    --font-content-line-height: 1.75; 
+:root {
+    --font-content-line-height: 1.75;
     /* --type-smaller-font-size: 0.833rem !important; */
 }
 
@@ -26,23 +31,23 @@ body {
     width: 100%;
 }
 
-p{
+p {
     line-height: var(--font-content-line-height);
 }
 
-#navbar li.on-page{
-    background-color:  #38597480;
+#navbar li.on-page {
+    background-color: #38597480;
     background-blend-mode: multiply;
 }
 
-#navbar .on-page a{
+#navbar .on-page a {
     color: white;
 }
 
 /* 
 This is the main navagation menu that exists on all pages.
 */
-#nav_gradient{
+#nav_gradient {
     background-image: linear-gradient(45deg, #80f7db8a, #2e92da8a, #c170ce8a);
 }
 
@@ -54,16 +59,19 @@ nav #navbar {
         "l-h w-g a-s c-p a-m c-m";
     place-items: center;
     text-align: center;
+    justify-content: center;
+    align-items: center;
     /* align-items: center; */
     width: 100%;
-    margin-top: 1%;
+    margin: 0%;
     /* margin-left: auto;
     margin-right: auto; */
     padding-inline-start: 0px;
     /* background-color:#7fffd4; */
     background-color: #00000000;
-    height: 2%;
+    /* height: 5%; */
     list-style-type: none;
+
 }
 
 #logo-home {
@@ -71,7 +79,6 @@ nav #navbar {
     height: 100%;
     width: 100%;
     /* padding:2%; */
-    border: 1px solid #000;
     background-color: #00000000;
 }
 
@@ -80,7 +87,6 @@ nav #navbar {
     height: 100%;
     width: 100%;
     /* padding:2%; */
-    border: 1px solid #000;
     background-color: #00000000;
 }
 
@@ -89,7 +95,6 @@ nav #navbar {
     height: 100%;
     width: 100%;
     /* padding:2%; */
-    border: 1px solid #000;
     background-color: #00000000;
 }
 
@@ -98,7 +103,6 @@ nav #navbar {
     height: 100%;
     width: 100%;
     /* padding:2%; */
-    border: 1px solid #000;
     background-color: #00000000;
 }
 
@@ -107,7 +111,6 @@ nav #navbar {
     height: 100%;
     width: 100%;
     /* padding:2%; */
-    border: 1px solid #000;
     background-color: #00000000;
 }
 
@@ -116,7 +119,6 @@ nav #navbar {
     height: 100%;
     width: 100%;
     /* padding:2%; */
-    border: 1px solid #000;
     background-color: #00000000;
 }
 
@@ -126,16 +128,32 @@ nav #navbar {
     /* background-color: #7fffd4; */
     color: #000;
     background-color: #00000000;
+    text-align: center;
 }
 
-#nav_gradient li:hover{
-    background-color:  #38597480;
+#navbar li {
+    border: 1px solid #000;
+}
+
+#navbar h3 {
+    margin: 6% 1% 6% 1%;
+}
+
+.vertical-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav_gradient li:hover {
+    background-color: #38597480;
     background-blend-mode: multiply;
 }
 
-#nav_gradient li:hover a{
+#nav_gradient li:hover a {
     color: white;
 }
+
 /* 
 Navagation ends here.
 */
@@ -164,7 +182,7 @@ footer {
     padding-inline-start: 0px;
 }
 
-.gradient-me strong{
+.gradient-me strong {
     grid-area: uncon;
 }
 
@@ -172,7 +190,7 @@ footer {
     text-align: center;
     font-family: "Rubik Puddles", cursive;
     /* src: url("https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap"); */
-    font-size:5vw;
+    font-size: 5vw;
     color: #ffffff;
     /* color:#000000; */
     /* text-shadow: 2px 2px rgba(0,0,0,0.8); */
@@ -201,22 +219,51 @@ footer {
     The currently hidden/deactivated "homepage image grouping"
     "Creative Works & Artistic Journey,Creativity Portfolio, Corey Clarke (title)"
 */
+
+.title-grid {
+    display: grid;
+    grid-template: 490px .5fr 100% 100%/ 1fr;
+    grid-template-areas:
+        "pict-head"
+        "quot-sect"
+        "drop-boxx"
+        ".";
+}
+
 #main_heading {
     /* clear: left; */
-    padding: 5% 10% 5% 10%;
-    background-image: url("images-4-web/rainbow-print-the-mask.jpg") ;
-    background-size:cover;
+    background-image: url("images-4-web/rainbow-print-the-mask.jpg");
+    background-size: cover;
     background-blend-mode: multiply;
     background-color: #2e92da8a;
     margin: 0px 15px 0px 15px;
+    grid-area: pict-head;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: stretch;
+    justify-items: center;
+
 }
-.gradient-title{
+
+
+.gradient-title {
+    width: max-content;
     background-image: linear-gradient(45deg, #80f7db, #2e92da, #c170ce8a);
 }
 
- h1 .gradient-title{
-   margin-right:20%;
+h1 .gradient-title {
+    margin-right: 20%;
 }
+
+.swicth-title {
+    display: none;
+    width: max-content;
+    background-image: linear-gradient(45deg, #80f7db, #2e92da, #c170ce8a);
+}
+
+
+
 /* 
  Homepage heading end here.
 */
@@ -273,6 +320,7 @@ Styles the currently hidden/deactivated image grouping that is only on homepage.
     max-width: 100%;
     max-height: 30%;
 }
+
 /* 
  Homepage image grouping ends here.
 */
@@ -282,13 +330,16 @@ Styles the currently hidden/deactivated image grouping that is only on homepage.
 Literalky adds style rules to the quote featured on the homepage.
 */
 #home_quote {
-    padding: 5%;
+    /* padding: 5%; */
     margin: 0px 15px 0px 15px;
-    text-align: center;
-    background-color:  #95c4eb;
+    /* text-align: center; */
+    background-color: #95c4eb;
+    grid-area: quot-sect;
 }
-#home_quote blockquote{
-    color:#000000;
+
+#home_quote blockquote {
+    color: #000000;
+    font-size: 1.3em
 }
 
 /* 
@@ -306,6 +357,7 @@ Refers to the dropdown function that gives more info on the quote's author that 
     text-align: center;
     position: relative;
     display: inline-block;
+    grid-area: drop-boxx;
 }
 
 .dropdown-button {
@@ -320,10 +372,11 @@ Refers to the dropdown function that gives more info on the quote's author that 
     text-decoration: none;
 }
 
+/* 
 .dropdown-button:hover {
     padding: 2.5%;
     font-size: 125%;
-}
+} */
 
 .dropdown:focus .dropdown-button {
     background-color: #ccc;
@@ -332,7 +385,7 @@ Refers to the dropdown function that gives more info on the quote's author that 
 }
 
 .dropdown-content {
-    display:none;
+    display: none;
     /* position: absolute; */
     background-color: #f9f9f9;
     /* width: 100%; */
@@ -340,7 +393,8 @@ Refers to the dropdown function that gives more info on the quote's author that 
     padding: 12px 16px;
     z-index: 1;
 }
-.gradient2back{
+
+.gradient2back {
     background-image: linear-gradient(45deg, #80f7db8a, #2e92da8a, #c170ce8a);
 }
 
@@ -357,8 +411,8 @@ Not sure what the first style rule does, but these are for styling the "Artist S
 }
 
 .art-state {
-    margin:  15px 0px 15px 0px;
-   
+    margin: 15px 0px 15px 0px;
+
 }
 
 .art-state2 {
@@ -428,25 +482,26 @@ End of "Under Construction" section.
     grid-area: icon2;
 }
 
-.creative-format{
+.creative-format {
     margin: 0px 15px 0px 15px;
 }
 
-.creative-format h1, .creative-format p{
-    padding:1% 5% 1% 5%;
+.creative-format h1,
+.creative-format p {
+    padding: 1% 5% 1% 5%;
 }
 
-.box-color{
-padding:1% 5% 1% 5%;
-background-color: #2e92da8a;
+.box-color {
+    padding: 1% 5% 1% 5%;
+    background-color: #2e92da8a;
 }
 
-.adjust-padding{
+.adjust-padding {
     /* width: 95%; */
     text-align: center;
 }
 
-.proccess-image{
+.proccess-image {
     max-width: 20%;
     height: auto;
 }
@@ -464,6 +519,7 @@ Two Column layout, fluid width/layout.
     /* border: 1px solid #000000; */
     background-color: #c170ce8a;
 }
+
 /* 
 End of ".acting-body" section.
 */
@@ -550,7 +606,8 @@ Style ruling for the aside section.
     background-color: #3278a68a;
 }
 
-.acting-body aside h2, h3 {
+.acting-body aside h2,
+.acting-body aside h3 {
     padding-left: 10%;
 }
 
@@ -576,9 +633,10 @@ Style ruling for the all of the main content in the layout.
     margin: 0;
 }
 
-.about-image{
+.about-image {
     padding: 0% 0% 5% 5%;
 }
+
 /* 
 End.
 */
@@ -636,16 +694,65 @@ End.
     padding: 5%;
 }
 
+.fix-facebook {
+    background-color: #0370e6;
+    padding: 1%;
+    border-radius: 1.4em;
+}
+
+
+.facebook-icon {
+    color: #0370e6;
+    /* font-size: 50px; */
+    font-size: 351%;
+    border-radius: 1em;
+    background-color: white;
+}
+
+
+.contact-flexbox-horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contact-flexbox-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#instagram-icon {
+    font-size: 400%;
+    line-height: .88em;
+    padding: 1%;
+    place-items: center;
+    text-align: center;
+    color: white;
+    border-radius: 0.3em;
+    background: radial-gradient(circle farthest-corner at 30% 100%,
+            #ffc600 10%,
+            #fa8e37 25%,
+            #f73344 40%,
+            transparent 65%),
+        linear-gradient(145deg, #8103fb 10%, #fb00cd 70%);
+}
+
+.contact-words-margin {
+    margin-left: 1em;
+}
+
 /* ---------------------------------- Media Queries ----------------------------------  */
 
 /* Changes the nav bar from a 1X6 to a 2X3 layout */
 @media only screen and (max-width:720px) {
-    #nav_gradient{
+    #nav_gradient {
         background-image: radial-gradient(farthest-corner at 20% 90%,
                 #80f7db8a,
                 #2e92da8a,
                 #c170ce8a);
     }
+
     nav #navbar {
         /* margin-top: 40px; changed to responsive */
         /* background-color: #ffffff; */
@@ -659,11 +766,11 @@ End.
         grid-gap: 10px;
         /* align-items: center; */
         width: 100%;
-        margin-top: 1%;
+        margin: 0%;
         /* margin-left: auto;
         margin-right: auto; */
         padding-inline-start: 0px;
-        height: 5%;
+        /* height: 10%; */
         list-style-type: none;
     }
 
@@ -672,61 +779,55 @@ End.
         height: 100%;
         width: 100%;
         /* padding:2%; */
-        box-shadow: 0 0 0 1px  #000;
         box-shadow: 0 0 0 10px #ffffff;
         background-color: #00000000;
     }
-    
+
     #work-gallery {
         grid-area: w-g;
         height: 100%;
         width: 100%;
         /* padding:2%; */
-        box-shadow: 0 0 0 1px  #000;
         box-shadow: 0 0 0 10px #ffffff;
         background-color: #00000000;
     }
-    
+
     #area-study {
         grid-area: a-s;
         height: 100%;
         width: 100%;
         /* padding:2%; */
-        box-shadow: 0 0 0 1px  #000;
         box-shadow: 0 0 0 10px #ffffff;
         background-color: #00000000;
     }
-    
+
     #creative-process {
         grid-area: c-p;
         height: 100%;
         width: 100%;
         /* padding:2%; */
-        box-shadow: 0 0 0 1px  #000;
         box-shadow: 0 0 0 10px #ffffff;
         background-color: #00000000;
     }
-    
+
     #about-me {
         grid-area: a-m;
         height: 100%;
         width: 100%;
         /* padding:2%; */
-        box-shadow: 0 0 0 1px  #000;
         box-shadow: 0 0 0 10px #ffffff;
         background-color: #00000000;
     }
-    
+
     #contact-me {
         grid-area: c-m;
         height: 100%;
         width: 100%;
         /* padding:2%; */
-        box-shadow: 0 0 0 1px  #000;
         box-shadow: 0 0 0 10px #ffffff;
         background-color: #00000000;
     }
-    
+
     #navbar a {
         /* padding: 5%; */
         text-decoration: none;
@@ -734,6 +835,11 @@ End.
         color: #000;
         background-color: #00000000;
     }
+
+    #navbar li {
+        border: none;
+    }
+
 }
 
 /* Adjusts the Under Construction lable so that is fits in the page properly */
@@ -773,37 +879,43 @@ End.
 All other content below is suppopsed to go out of view
 */
 @media screen and (max-width: 1920px) and (min-width:1189px) {
-    
+    /* 
     #main_heading {
-        padding: 29% 19% 1% 1%;
-    }
+        padding: 20% 19% 1% 1%;
+    } */
+
     #home_quote {
-        padding: 5% 10% 5% 10%;
+        padding: 2% 10% 2% 10%;
         text-align: center;
     }
+
     .dropdown {
         margin-bottom: 30%;
     }
 }
+
 @media screen and (max-width: 1189px) and (min-width:935px) {
-    #main_heading {
-        padding: 29% 19% 1% 1%;
-    }
+    /* #main_heading {
+        padding: 27% 19% 1% 1%;
+    } */
+
     #home_quote {
-        padding: 5% 10% 5% 10%;
+        padding: 2% 10% 2% 10%;
         text-align: center;
     }
+
     .dropdown {
         margin-bottom: 20%;
     }
 }
 
 @media screen and (max-width: 935px) and (min-width:788px) {
-    #main_heading {
+    /* #main_heading {
         padding: 29% 19% 1% 1%;
-    }
+    } */
+
     #home_quote {
-        padding: 5% 10% 5% 10%;
+        padding: 2% 10% 2% 10%;
         text-align: center;
     }
 
@@ -813,11 +925,12 @@ All other content below is suppopsed to go out of view
 }
 
 @media screen and (max-width: 787px) and (min-width:721px) {
-    #main_heading {
+    /* #main_heading {
         padding: 29% 19% 1% 1%;
-    }
+    } */
+
     #home_quote {
-        padding: 5% 10% 5% 10%;
+        padding: 2% 10% 2% 10%;
         text-align: center;
     }
 
@@ -827,11 +940,23 @@ All other content below is suppopsed to go out of view
 }
 
 @media screen and (max-width: 720px) and (min-width:680px) {
-    #main_heading {
+    /* #main_heading {
         padding: 29% 19% 1% 1%;
-    }
+    } */
+
+
+.title-grid {
+    display: grid;
+    grid-template: 420px .5fr 100% 100%/ 1fr;
+    grid-template-areas:
+        "pict-head"
+        "quot-sect"
+        "drop-boxx"
+        ".";
+}
+
     #home_quote {
-        padding: 5% 10% 5% 10%;
+        padding: 2% 10% 2% 10%;
         text-align: center;
     }
 
@@ -841,24 +966,75 @@ All other content below is suppopsed to go out of view
 }
 
 @media screen and (max-width: 679px) and (min-width:333px) {
-    #main_heading {
-        padding: 29% 19% 1% 1%;
+
+    .title-grid {
+        display: grid;
+        grid-template: 420px auto 100% .5fr/ 1fr;
+        grid-template-areas:
+            "pict-head"
+            "quot-sect"
+            "drop-boxx"
+            ".";
     }
+
+    /* #main_heading {
+        padding: 29% 0% 1% 1%;
+    } */
+
     #home_quote {
-        padding: 5% 10% 5% 10%;
+        padding: 2% 10% 2% 10%;
         text-align: center;
     }
 
     .dropdown {
         margin-bottom: 35%;
     }
+
+    .start-title {
+        display: none;
+    }
+
+    .swicth-title {
+        display: block;
+        background-image: linear-gradient(45deg, #80f7db, #2e92da, #c170ce8a);
+    }
+
+    /* .horizontal-center{
+    }
+    */
 }
 
-/* Notes for fixing the icon and "Under Construction" break on the homepage.
 
 
+/* fixes oversizing of icon padding in the contact page
 */
+@media screen and (max-width: 1920px) and (min-width:880px) {
+    .fix-facebook {
+        background-color: #0370e6;
+        padding: .8%;
+        border-radius: 1.4em;
+    }
 
+    #instagram-icon {
+        font-size: 400%;
+        line-height: .88em;
+        padding: .8%;
+        place-items: center;
+        text-align: center;
+        color: white;
+        border-radius: 0.3em;
+        background: radial-gradient(circle farthest-corner at 30% 100%,
+                #ffc600 10%,
+                #fa8e37 25%,
+                #f73344 40%,
+                transparent 65%),
+            linear-gradient(145deg, #8103fb 10%, #fb00cd 70%);
+    }
+
+}
+
+/* End
+*/
 
 
 
@@ -1007,4 +1183,33 @@ Add space arround an element:
 
 Add padding to a specific edge/side of an element:
     margin-right:1em;
+
+
+SURPRISE! A lot of web developers now-a-days don’t
+develop directly in HTML or CSS code anymore
+• React
+• JavaScript library that can be used to build websites,
+mobile applications, and more
+• React Javascript code manipulates the DOM which
+creates HTML/CSS rendered in browser
+• Syntax is HTML-like
+• Other popular JS libraries & frameworks:
+• AngularJS: an alternative to React
+• Vue.js: another alternative
+• Material-UI: pretty components for React websites
+• Bootstrap: responsive layouts & components
+• Best to understand HTML, CSS, and JavaScript
+before diving into these advanced frameworks
+
+
+Next Steps if you Want to be a
+Web Developer
+• Learn Javascript (a REAL programming language)
+• CIS255: Web Scripting (next quarter)
+• Learn Javascript course on Codecademy
+• Skills & Drills for JS (or any language): Code Wars
+• Full-stack Javascript course on The Odin Project
+• Used extensively in CIS255
+
+
 */
