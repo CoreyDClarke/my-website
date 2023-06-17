@@ -1,0 +1,49 @@
+
+Robert Serembe
+
+Corey, You have a great website and i cant wait to see when it's complete. 
+Your website background colors look good, i love the font style used and also how you were able to link your page to other websites. 
+One thing and in a very respectful way....Try to fix the PAGE TITLE that when you scroll down the page, the title don't disappear. 
+And it looks like UNDER CONSTRUCTION is your page title i was suggesting if you can put a title that tells all about your website 
+and maybe make the title font-size bigger and bold. 
+great job on using the media, when i resized/maximized your page breaks all evenly and looks much better than when it's maximized. 
+I loved also how you used your menus which makes your page stand out from other pages. 
+ABOUT ME is the menu that captured my attention i will be honesty and say that that section looks perfect because you have the sides, 
+the description about you and the title which have different colors.
+Nice work on that section. Other than that.......good job and i cant wait to see your website when it's complete.
+
+
+The above text is from my peer Robert Serembe. 
+My understanding of his critique for my website is a little limited. 
+His comments either highlight his positive viewpoint of my website, or intentianally butter me up.
+From what I could see there was only one piece of critizism:
+
+"One thing and in a very respectful way....Try to fix the PAGE TITLE that when you scroll down the page, the title don't disappear."
+
+Which I assume he is refering to the navagation bar and wants it to be sticky?
+I will try to involve this into my website, but honestly I might have my work cut out for me.
+
+(Self Critique)
+I will also be working on the content and content formatting, because that is the #1 critique I have for my website at this point.
+Also, I am really running out of time at this point, which is like being broke when you need to buy something. 
+So I need to be realistic.
+
+
+The Results: 
+
+I thankfully figured out how to get my navbar sticky, after a long while, however it was still created faster than expected.
+Unfortunately, it is not perfect, because certain parts still need fixing. For example: the dropdown button goes over the navbar as you scroll. 
+Which thankfully is not that noticable.
+
+I Fixed the format of my image gallery and filled it with some content.(For Self Critique)
+
+
+Extra Credit:
+I added a table at the bottom of my "Contact" page.
+
+
+I found a way to add a basic favicon using:
+https://gauger.io/fonticon/
+
+If I had more time I would mess with the colors more.
+

@@ -154,6 +154,19 @@ nav #navbar {
     color: white;
 }
 
+.sticky {
+    /* position: -webkit-sticky;
+    position: sticky; */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #ffffff;
+}
+
+.fill-me {
+    margin: 8%;
+}
+
 /* 
 Navagation ends here.
 */
@@ -428,12 +441,25 @@ End of "Artist Statement" CSS.
 
 /* ---------------------------------- Sub-page: All Works ----------------------------------  */
 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Adjust the column width as needed */
+    gap: 10px;
+    /* Adjust the gap between images as needed */
+}
 
+.gallery img {
+    width: 100%;
+    height: auto;
+}
 
 
 /* ---------------------------------- Sub-page: Areas of Study ----------------------------------  */
 
-
+.off-smallcaps {
+    font-variant: none;
+}
 
 
 /* ---------------------------------- Sub-page: Creative Proccess ----------------------------------  */
@@ -486,7 +512,7 @@ End of "Under Construction" section.
     margin: 0px 15px 0px 15px;
 }
 
-.creative-format h1,
+.creative-format .h1,
 .creative-format p {
     padding: 1% 5% 1% 5%;
 }
@@ -503,6 +529,23 @@ End of "Under Construction" section.
 
 .proccess-image {
     max-width: 20%;
+    height: auto;
+}
+
+
+.img-creative {
+    max-width: 80%;
+    height: auto;
+}
+
+.creative-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+}
+
+.creative-gallery img {
+    width: 100%;
     height: auto;
 }
 
@@ -674,6 +717,10 @@ I may have to make more rulings if other images are added.
 End.
 */
 
+
+
+
+
 /* 
 Styles the footer so that its width ia equal to 100% of it's parent's width.
 Plus other style rulings
@@ -741,6 +788,62 @@ End.
 .contact-words-margin {
     margin-left: 1em;
 }
+
+
+.price-table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.price-table .column-left{
+    vertical-align: middle;
+}
+
+.price-table .column-left, .price-table .column-middle{
+    text-align: center;
+}
+
+.price-table thead {
+    background-color:
+        #96c4ea;
+}
+
+.price-table th,
+.price-table td {
+    border: 1px solid black;
+    padding: .2em .7em;
+}
+
+
+.price-table img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 250px;
+    max-width: 400px;
+}
+
+.pricboard  ol{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    padding-left:0;
+}
+
+.pricboard h1, .pricboard h3 {    
+    text-align: center;
+}
+
+
+.pricboard {
+    background-color: #b0d8e0;
+    margin-top: 380px;
+    padding: 1.5%;
+}
+
+
+
 
 /* ---------------------------------- Media Queries ----------------------------------  */
 
@@ -892,6 +995,16 @@ All other content below is suppopsed to go out of view
     .dropdown {
         margin-bottom: 30%;
     }
+
+    .fill-me {
+        margin: 65px;
+    }
+
+    .creative-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        gap: 10px;
+    }
 }
 
 @media screen and (max-width: 1189px) and (min-width:935px) {
@@ -907,6 +1020,17 @@ All other content below is suppopsed to go out of view
     .dropdown {
         margin-bottom: 20%;
     }
+
+    .fill-me {
+        margin: 70px;
+    }
+
+    .creative-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 10px;
+    }
+
 }
 
 @media screen and (max-width: 935px) and (min-width:788px) {
@@ -921,6 +1045,10 @@ All other content below is suppopsed to go out of view
 
     .dropdown {
         margin-bottom: 20%;
+    }
+
+    .fill-me {
+        margin: 80px;
     }
 }
 
@@ -937,6 +1065,18 @@ All other content below is suppopsed to go out of view
     .dropdown {
         margin-bottom: 30%;
     }
+
+    .fill-me {
+        margin: 65px;
+    }
+
+    .price-table img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 300px;
+        max-width: 70%;
+    }
 }
 
 @media screen and (max-width: 720px) and (min-width:680px) {
@@ -945,15 +1085,15 @@ All other content below is suppopsed to go out of view
     } */
 
 
-.title-grid {
-    display: grid;
-    grid-template: 420px .5fr 100% 100%/ 1fr;
-    grid-template-areas:
-        "pict-head"
-        "quot-sect"
-        "drop-boxx"
-        ".";
-}
+    .title-grid {
+        display: grid;
+        grid-template: 420px .5fr 100% 100%/ 1fr;
+        grid-template-areas:
+            "pict-head"
+            "quot-sect"
+            "drop-boxx"
+            ".";
+    }
 
     #home_quote {
         padding: 2% 10% 2% 10%;
@@ -962,6 +1102,18 @@ All other content below is suppopsed to go out of view
 
     .dropdown {
         margin-bottom: 35%;
+    }
+
+    .fill-me {
+        margin: 130px;
+    }
+
+    .price-table img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 250px;
+        max-width: 70%;
     }
 }
 
@@ -1002,6 +1154,36 @@ All other content below is suppopsed to go out of view
     /* .horizontal-center{
     }
     */
+
+    .fill-me {
+        margin: 135px;
+    }
+
+    .price-table img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 150px;
+        max-width: 20%;
+    }
+}
+
+@media screen and (max-width: 470px) and (min-width:333px) {
+    .price-table img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 60px;
+        max-width: 20%;
+    }
+
+    .price-table p{
+        font-size: 50%;
+    }
+
+    .price-table td{
+        font-size: 50%;
+    }
 }
 
 
