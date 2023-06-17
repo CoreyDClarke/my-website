@@ -5,8 +5,6 @@
 /* display:block;
 display:none; 
 
-
-note: Create Sticky navagation
 */
 
 /* ---------------------------------- Universal CSS presets (Activates on all pages)----------------------------------  */
@@ -18,7 +16,6 @@ note: Create Sticky navagation
 
 :root {
     --font-content-line-height: 1.75;
-    /* --type-smaller-font-size: 0.833rem !important; */
 }
 
 
@@ -52,7 +49,6 @@ This is the main navagation menu that exists on all pages.
 }
 
 nav #navbar {
-    /* margin-top: 40px; changed to responsive */
     display: grid;
     grid-template: 1fr/ 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
@@ -61,15 +57,10 @@ nav #navbar {
     text-align: center;
     justify-content: center;
     align-items: center;
-    /* align-items: center; */
     width: 100%;
     margin: 0%;
-    /* margin-left: auto;
-    margin-right: auto; */
     padding-inline-start: 0px;
-    /* background-color:#7fffd4; */
     background-color: #00000000;
-    /* height: 5%; */
     list-style-type: none;
 
 }
@@ -78,7 +69,6 @@ nav #navbar {
     grid-area: l-h;
     height: 100%;
     width: 100%;
-    /* padding:2%; */
     background-color: #00000000;
 }
 
@@ -86,7 +76,6 @@ nav #navbar {
     grid-area: w-g;
     height: 100%;
     width: 100%;
-    /* padding:2%; */
     background-color: #00000000;
 }
 
@@ -94,7 +83,6 @@ nav #navbar {
     grid-area: a-s;
     height: 100%;
     width: 100%;
-    /* padding:2%; */
     background-color: #00000000;
 }
 
@@ -102,7 +90,6 @@ nav #navbar {
     grid-area: c-p;
     height: 100%;
     width: 100%;
-    /* padding:2%; */
     background-color: #00000000;
 }
 
@@ -110,7 +97,6 @@ nav #navbar {
     grid-area: a-m;
     height: 100%;
     width: 100%;
-    /* padding:2%; */
     background-color: #00000000;
 }
 
@@ -118,14 +104,11 @@ nav #navbar {
     grid-area: c-m;
     height: 100%;
     width: 100%;
-    /* padding:2%; */
     background-color: #00000000;
 }
 
 #navbar a {
-    /* padding: 5%; */
     text-decoration: none;
-    /* background-color: #7fffd4; */
     color: #000;
     background-color: #00000000;
     text-align: center;
@@ -155,8 +138,6 @@ nav #navbar {
 }
 
 .sticky {
-    /* position: -webkit-sticky;
-    position: sticky; */
     position: fixed;
     width: 100%;
     top: 0;
@@ -166,7 +147,6 @@ nav #navbar {
 .fill-me {
     margin: 8%;
 }
-
 /* 
 Navagation ends here.
 */
@@ -202,12 +182,8 @@ footer {
 .font-tryme {
     text-align: center;
     font-family: "Rubik Puddles", cursive;
-    /* src: url("https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap"); */
     font-size: 5vw;
     color: #ffffff;
-    /* color:#000000; */
-    /* text-shadow: 2px 2px rgba(0,0,0,0.8); */
-    /* text-shadow: 1px 1px 2px,0 0 2em rgba(0, 0, 255, 0), 0 0 1em blue, 0 0 0.2em blue; */
     margin: 0;
     padding: 2.5%;
 }
@@ -244,7 +220,6 @@ footer {
 }
 
 #main_heading {
-    /* clear: left; */
     background-image: url("images-4-web/rainbow-print-the-mask.jpg");
     background-size: cover;
     background-blend-mode: multiply;
@@ -274,9 +249,6 @@ h1 .gradient-title {
     width: max-content;
     background-image: linear-gradient(45deg, #80f7db, #2e92da, #c170ce8a);
 }
-
-
-
 /* 
  Homepage heading end here.
 */
@@ -333,7 +305,6 @@ Styles the currently hidden/deactivated image grouping that is only on homepage.
     max-width: 100%;
     max-height: 30%;
 }
-
 /* 
  Homepage image grouping ends here.
 */
@@ -343,9 +314,7 @@ Styles the currently hidden/deactivated image grouping that is only on homepage.
 Literalky adds style rules to the quote featured on the homepage.
 */
 #home_quote {
-    /* padding: 5%; */
     margin: 0px 15px 0px 15px;
-    /* text-align: center; */
     background-color: #95c4eb;
     grid-area: quot-sect;
 }
@@ -354,7 +323,6 @@ Literalky adds style rules to the quote featured on the homepage.
     color: #000000;
     font-size: 1.3em
 }
-
 /* 
 Quote section ends.
 */
@@ -385,12 +353,6 @@ Refers to the dropdown function that gives more info on the quote's author that 
     text-decoration: none;
 }
 
-/* 
-.dropdown-button:hover {
-    padding: 2.5%;
-    font-size: 125%;
-} */
-
 .dropdown:focus .dropdown-button {
     background-color: #ccc;
     color: #fff;
@@ -399,9 +361,7 @@ Refers to the dropdown function that gives more info on the quote's author that 
 
 .dropdown-content {
     display: none;
-    /* position: absolute; */
     background-color: #f9f9f9;
-    /* width: 100%; */
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 12px 16px;
     z-index: 1;
@@ -410,16 +370,14 @@ Refers to the dropdown function that gives more info on the quote's author that 
 .gradient2back {
     background-image: linear-gradient(45deg, #80f7db8a, #2e92da8a, #c170ce8a);
 }
-
 /* 
 Dropdown CSS ends here.
 */
 
 /* 
-Not sure what the first style rule does, but these are for styling the "Artist Statement" section that is below the dropdown.
+Styling for the "Artist Statement" section that is below the dropdown.
 */
 .art-state main {
-    /* padding:0 40px 0 40px; changed to responsive */
     padding: 0 4% 0 4%;
 }
 
@@ -432,7 +390,6 @@ Not sure what the first style rule does, but these are for styling the "Artist S
     border: dashed #000000;
     margin: 0 5%;
 }
-
 /* 
 End of "Artist Statement" CSS.
 */
@@ -464,41 +421,6 @@ End of "Artist Statement" CSS.
 
 /* ---------------------------------- Sub-page: Creative Proccess ----------------------------------  */
 
-/* 
-All the style rulings that modifies the text "Under Construction"
-
-Side-note(s): This may need to be further changed to apply specific style ruling suitable for other sub-pages.
-Currently active on all pages except "About Me" where it is modified.
-
-The background color of the gradient is slightly differnt on the homepage since the colors are transparent. 
-The homepage version has a blue backdrop/background color instead of the white color on all the other pages. 
-*/
-/* .gradient-me{
-        background-image:linear-gradient(45deg, #80f7db8a , #2e92da8a , #c170ce8a);
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    }
-    .font-tryme{
-        text-align: center;
-        font-family: "Rubik Puddles", cursive;
-        / src: url("https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap"); /
-        font-size: 350%;
-        color:#ffffff;
-        / color:#000000;
-         text-shadow: 2px 2px rgba(0,0,0,0.8); 
-         text-shadow: 1px 1px 2px,0 0 2em rgba(0, 0, 255, 0), 0 0 1em blue, 0 0 0.2em blue; /
-        margin: 0;
-        padding:2.5%;
-    } 
-
-.font-tryme2 {
-    font-family: 'Foldit', cursive;
-    text-align: center;
-    font-size: 300%;
-}*/
-/* 
-End of "Under Construction" section.
-*/
-
 
 .acting-grid1 {
     grid-area: icon1;
@@ -523,7 +445,6 @@ End of "Under Construction" section.
 }
 
 .adjust-padding {
-    /* width: 95%; */
     text-align: center;
 }
 
@@ -531,7 +452,6 @@ End of "Under Construction" section.
     max-width: 20%;
     height: auto;
 }
-
 
 .img-creative {
     max-width: 80%;
@@ -562,7 +482,6 @@ Two Column layout, fluid width/layout.
     /* border: 1px solid #000000; */
     background-color: #c170ce8a;
 }
-
 /* 
 End of ".acting-body" section.
 */
@@ -579,12 +498,8 @@ Contains: "About Me" and "Under Constuction"
         "am am uc";
     place-items: center;
     text-align: center;
-    /* align-items: center; */
     width: 100%;
-    /* margin-left: auto;
-    margin-right: auto; */
     padding-inline-start: 0px;
-    /* background-color:#7fffd4; */
     height: 10%;
     list-style-type: none;
 }
@@ -605,20 +520,16 @@ Contains: "About Me" and "Under Constuction"
 
 .float-r .about-gradient-me {
     background-image: linear-gradient(45deg, #80f7db8a, #2e92da8a, #c170ce8a);
-    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
     padding: 2%;
 }
 
 .float-r .font-tryme {
     text-align: center;
     font-family: "Rubik Puddles", cursive;
-    /* src: url("https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap"); */
     font-size: 200%;
     color: #ffffff;
     padding: 0;
-    /* margin: 3% 2% 3% 0; */
 }
-
 /* 
 CSS title section ends.
 */
@@ -631,9 +542,8 @@ Fixes the aside section to adjust the height relative to the content added.
     height: auto;
     display: inline-flex
 }
-
 /* 
-Fixes the aside section end.
+ Aside section fix ends.
 */
 
 
@@ -653,7 +563,6 @@ Style ruling for the aside section.
 .acting-body aside h3 {
     padding-left: 10%;
 }
-
 /* 
 End.
 */
@@ -668,7 +577,6 @@ Style ruling for the all of the main content in the layout.
     margin: 0;
     padding: 0;
     background-color: #ffffff;
-    /* overflow: auto; */
 }
 
 .acting-body main h2 {
@@ -679,7 +587,6 @@ Style ruling for the all of the main content in the layout.
 .about-image {
     padding: 0% 0% 5% 5%;
 }
-
 /* 
 End.
 */
@@ -690,13 +597,10 @@ I forgot why I needed this, but it also acts as a container for the main content
 It most likely related to me trying to fix the content to grow or flex in size so that content does not overflow?
 */
 .about-flexbox {
-    /* display:flex; */
     vertical-align: top;
     box-sizing: border-box;
     height: 100%;
-    /* padding: 10px; */
 }
-
 /* 
 End.
 */
@@ -712,7 +616,6 @@ I may have to make more rulings if other images are added.
     width: 100%;
     height: auto;
 }
-
 /* 
 End.
 */
@@ -730,7 +633,6 @@ Plus other style rulings
     background-color: #80f7db8a;
     padding: 1.5%;
 }
-
 /* 
 End.
 */
@@ -750,7 +652,6 @@ End.
 
 .facebook-icon {
     color: #0370e6;
-    /* font-size: 50px; */
     font-size: 351%;
     border-radius: 1em;
     background-color: white;
@@ -795,9 +696,6 @@ End.
     border-collapse: collapse;
 }
 
-.price-table .column-left{
-    vertical-align: middle;
-}
 
 .price-table .column-left, .price-table .column-middle{
     text-align: center;
@@ -857,8 +755,6 @@ End.
     }
 
     nav #navbar {
-        /* margin-top: 40px; changed to responsive */
-        /* background-color: #ffffff; */
         display: grid;
         grid-template: 1fr 1fr/ 1fr 1fr 1fr;
         grid-template-areas:
@@ -867,13 +763,9 @@ End.
         place-items: center;
         text-align: center;
         grid-gap: 10px;
-        /* align-items: center; */
         width: 100%;
         margin: 0%;
-        /* margin-left: auto;
-        margin-right: auto; */
         padding-inline-start: 0px;
-        /* height: 10%; */
         list-style-type: none;
     }
 
@@ -881,7 +773,6 @@ End.
         grid-area: l-h;
         height: 100%;
         width: 100%;
-        /* padding:2%; */
         box-shadow: 0 0 0 10px #ffffff;
         background-color: #00000000;
     }
@@ -890,7 +781,6 @@ End.
         grid-area: w-g;
         height: 100%;
         width: 100%;
-        /* padding:2%; */
         box-shadow: 0 0 0 10px #ffffff;
         background-color: #00000000;
     }
@@ -899,7 +789,6 @@ End.
         grid-area: a-s;
         height: 100%;
         width: 100%;
-        /* padding:2%; */
         box-shadow: 0 0 0 10px #ffffff;
         background-color: #00000000;
     }
@@ -908,7 +797,6 @@ End.
         grid-area: c-p;
         height: 100%;
         width: 100%;
-        /* padding:2%; */
         box-shadow: 0 0 0 10px #ffffff;
         background-color: #00000000;
     }
@@ -917,7 +805,6 @@ End.
         grid-area: a-m;
         height: 100%;
         width: 100%;
-        /* padding:2%; */
         box-shadow: 0 0 0 10px #ffffff;
         background-color: #00000000;
     }
@@ -926,7 +813,6 @@ End.
         grid-area: c-m;
         height: 100%;
         width: 100%;
-        /* padding:2%; */
         box-shadow: 0 0 0 10px #ffffff;
         background-color: #00000000;
     }
@@ -950,7 +836,6 @@ End.
     .font-tryme {
         text-align: center;
         font-family: "Rubik Puddles", cursive;
-        /* src: url("https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap"); */
         font-size: 56px;
         color: #ffffff;
         margin: 0;
@@ -962,7 +847,6 @@ End.
     .font-tryme {
         text-align: center;
         font-family: "Rubik Puddles", cursive;
-        /* src: url("https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap"); */
         font-size: 200%;
         color: #ffffff;
         margin: 0;
@@ -982,10 +866,6 @@ End.
 All other content below is suppopsed to go out of view
 */
 @media screen and (max-width: 1920px) and (min-width:1189px) {
-    /* 
-    #main_heading {
-        padding: 20% 19% 1% 1%;
-    } */
 
     #home_quote {
         padding: 2% 10% 2% 10%;
@@ -1008,9 +888,6 @@ All other content below is suppopsed to go out of view
 }
 
 @media screen and (max-width: 1189px) and (min-width:935px) {
-    /* #main_heading {
-        padding: 27% 19% 1% 1%;
-    } */
 
     #home_quote {
         padding: 2% 10% 2% 10%;
@@ -1034,9 +911,6 @@ All other content below is suppopsed to go out of view
 }
 
 @media screen and (max-width: 935px) and (min-width:788px) {
-    /* #main_heading {
-        padding: 29% 19% 1% 1%;
-    } */
 
     #home_quote {
         padding: 2% 10% 2% 10%;
@@ -1053,9 +927,6 @@ All other content below is suppopsed to go out of view
 }
 
 @media screen and (max-width: 787px) and (min-width:721px) {
-    /* #main_heading {
-        padding: 29% 19% 1% 1%;
-    } */
 
     #home_quote {
         padding: 2% 10% 2% 10%;
@@ -1080,10 +951,6 @@ All other content below is suppopsed to go out of view
 }
 
 @media screen and (max-width: 720px) and (min-width:680px) {
-    /* #main_heading {
-        padding: 29% 19% 1% 1%;
-    } */
-
 
     .title-grid {
         display: grid;
@@ -1129,10 +996,6 @@ All other content below is suppopsed to go out of view
             ".";
     }
 
-    /* #main_heading {
-        padding: 29% 0% 1% 1%;
-    } */
-
     #home_quote {
         padding: 2% 10% 2% 10%;
         text-align: center;
@@ -1150,10 +1013,6 @@ All other content below is suppopsed to go out of view
         display: block;
         background-image: linear-gradient(45deg, #80f7db, #2e92da, #c170ce8a);
     }
-
-    /* .horizontal-center{
-    }
-    */
 
     .fill-me {
         margin: 135px;
@@ -1214,7 +1073,6 @@ All other content below is suppopsed to go out of view
     }
 
 }
-
 /* End
 */
 
